@@ -1,9 +1,12 @@
-.css-74e2me-MuiInputBase-root-MuiInput-root-MuiSelect-root::after {
+.MuiSelect-select::after {
     border-bottom: none !important;
 }
-.css-74e2me-MuiInputBase-root-MuiInput-root-MuiSelect-root::before {
+.MuiSelect-select::before {
     border-bottom: none !important;
 }
-.css-74e2me-MuiInputBase-root-MuiInput-root-MuiSelect-root {
+.MuiSelect-select {
     font-size: 13px !important;
 }
+// .css-74e2me-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+//     border-bottom: none !important;
+// }

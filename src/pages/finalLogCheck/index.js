@@ -78,6 +78,7 @@ const Checks = () => {
                 variant="standard"
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
+                disableUnderline
               >
                 <MenuItem value={"1"} selected>
                   Yes

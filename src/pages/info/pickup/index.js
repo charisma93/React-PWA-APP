@@ -117,6 +117,7 @@ const PickUp = () => {
                   variant="standard"
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"3"}
+                  disableUnderline
                 >
                   <MenuItem value={"1"} selected>
                     1/4 Tank
@@ -145,6 +146,7 @@ const PickUp = () => {
                   variant="standard"
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
+                  disableUnderline
                 >
                   <MenuItem value={"1"} selected>
                     Genset Clip
@@ -183,6 +185,7 @@ const PickUp = () => {
                   variant="standard"
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
+                  disableUnderline
                 >
                   <MenuItem value={"1"} selected>
                     Yes
@@ -209,6 +212,7 @@ const PickUp = () => {
                   variant="standard"
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
+                  disableUnderline
                 >
                   <MenuItem value={"1"} selected>
                     Yes
@@ -235,6 +239,7 @@ const PickUp = () => {
                   variant="standard"
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
+                  disableUnderline
                 >
                   <MenuItem value={"1"} selected>
                     Yes

@@ -132,6 +132,7 @@ const Dashboard = () => {
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
                 input={<SelectInput />}
+                disableUnderline
               >
                 <MenuItem value={"1"} selected>
                   Yard Name
@@ -146,6 +147,7 @@ const Dashboard = () => {
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
                 input={<SelectInput />}
+                disableUnderline
               >
                 <MenuItem value={"1"} selected>
                   Container
