@@ -1,0 +1,35 @@
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  padding-right: 12px !important;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #F8F9FD;
+  margin-left: 18px;
+  img {
+    transform: translate(44%, 50%);
+  }
+}
+
+.card {
+  .detail_txt {
+    font-size: 9px;
+    color: #8492A7;
+    text-align: start;
+  }
+  &:hover {
+    border: 1px solid #0B98DA ;
+  }
+  &:focus {
+    border: 1px solid #0B98DA ;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: -webkit-fill-available;
+  padding: 32px;
+}
