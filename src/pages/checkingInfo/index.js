@@ -5,7 +5,6 @@ import {
   Divider,
   Select,
   MenuItem,
-  Button,
 } from "@mui/material";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import {
@@ -13,7 +12,7 @@ import {
   MuiSaveButton,
   AddPhotoButton,
 } from "../../components/Button";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "react-router-dom";
 import share from "../../assets/icons/share.svg";
