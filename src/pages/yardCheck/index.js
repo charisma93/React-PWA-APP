@@ -49,7 +49,7 @@ const Home = () => {
           </Box>
         </header>
 
-        <div className="driver-page"  onClick={() => navigate('/checkinginfo')}>
+        <div className="yard-check"  onClick={() => navigate('/checkinginfo')}>
           <Box
             sx={{
               bgcolor: "background.paper",

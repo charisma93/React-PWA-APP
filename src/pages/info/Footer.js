@@ -16,9 +16,12 @@ const Content = (props) => {
       {id !== "1" && id !== "6" ? (
         <Box
           sx={{
-            padding: "64px 32px",
+            padding: "64px 32px 30px",
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            width: '-webkit-fill-available',
+            position: 'fixed',
+            bottom: '0'
           }}
         >
           <MuiBackButton>
@@ -40,7 +43,10 @@ const Content = (props) => {
       ) : (
         <Box
           sx={{
-            padding: "0px 32px",
+            padding: "64px 32px 30px",
+            width: '-webkit-fill-available',
+            position: 'fixed',
+            bottom: '0'
           }}
         >
           <Box mt={3}>

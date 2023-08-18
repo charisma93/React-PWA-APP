@@ -8,6 +8,7 @@ const MuiBackButton = styled(Button)({
   backgroundColor: "#CEEAF8",
   color: "#0B98DA",
   width: "153px",
+  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
   "&:hover": {
@@ -23,6 +24,7 @@ const MuiSaveButton = styled(Button)({
   backgroundColor: "#0B98DA",
   color: "white",
   width: "153px",
+  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
   "&:hover": {
@@ -67,6 +69,7 @@ const MuiButton = styled(Button)({
   backgroundColor: "#0B98DA",
   color: "white",
   width: "100%",
+  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
   "&:hover": {

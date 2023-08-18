@@ -13,7 +13,7 @@ import share from "../../assets/icons/share.svg";
 import flydown from "../../assets/icons/flydown.svg";
 import flyup from "../../assets/icons/flyup.svg";
 import yard from "../../assets/icons/yard.svg";
-import genSett from "../../assets/icons/genSett.svg";
+import genSett from "../../assets/icons/genSett.png";
 import "./index.scss";
 
 const theme = createTheme({
@@ -147,7 +147,7 @@ const Checks = () => {
               marginTop: "15px",
             }}
           >
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", alignItems: 'center' }}>
               <img src={genSett} alt="genSett" width={22} />
               <Typography variant="title" pl={2}>
                 Add Gen Sett

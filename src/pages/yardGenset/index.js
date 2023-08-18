@@ -86,6 +86,7 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
+                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -115,6 +116,7 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
+                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -144,6 +146,7 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"3"}
                   disableUnderline
+                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
                 >
                   <MenuItem value={"1"} selected>
                     1/4 Tank

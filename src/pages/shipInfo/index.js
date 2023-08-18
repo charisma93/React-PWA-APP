@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Box, Typography, Input, Divider } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import {  MuiBackButton, MuiSaveButton } from '../../components/Button'
+import { MuiBackButton, MuiSaveButton } from "../../components/Button";
 import share from "../../assets/icons/share.svg";
 import { Link } from "react-router-dom";
+import "./shipInfo.scss";
 
 const theme = createTheme({
   typography: {
@@ -55,7 +56,7 @@ const ShipInfo = () => {
               borderRadius: 2,
               p: 2,
               textAlign: "center",
-              height: '454px'
+              height: "454px",
             }}
           >
             <Box sx={{ display: "flex", p: "8px 0px" }}>
@@ -63,7 +64,19 @@ const ShipInfo = () => {
                 {" "}
                 K+N #{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -72,7 +85,19 @@ const ShipInfo = () => {
                 {" "}
                 Truck #{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -81,7 +106,19 @@ const ShipInfo = () => {
                 {" "}
                 Seal #{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -90,7 +127,19 @@ const ShipInfo = () => {
                 {" "}
                 Load Time #{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -99,7 +148,19 @@ const ShipInfo = () => {
                 {" "}
                 Return{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -108,7 +169,19 @@ const ShipInfo = () => {
                 {" "}
                 Load Location{" "}
               </Typography>
-              <Input width={"60%"} disableUnderline={true} autoFocus={true} />
+              <Input
+                width={"60%"}
+                disableUnderline={true}
+                autoFocus={true}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      textAlign: "right",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
           </Box>
@@ -116,13 +189,26 @@ const ShipInfo = () => {
 
         <Box
           sx={{
-            padding: "64px 32px",
+            padding: "64px 32px 30px",
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            width: '-webkit-fill-available',
+            position: 'fixed',
+            bottom: '0'
           }}
         >
-          <MuiBackButton><Link to={'/info/1'} style={{ color: '#0B98DA' }}> Back </Link></MuiBackButton>
-          <MuiSaveButton><Link to={'/info/2'} style={{ color: 'white' }}> Save </Link></MuiSaveButton>
+          <MuiBackButton>
+            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+              {" "}
+              Back{" "}
+            </Link>
+          </MuiBackButton>
+          <MuiSaveButton>
+            <Link to={"/info/2"} style={{ color: "white" }}>
+              {" "}
+              Save{" "}
+            </Link>
+          </MuiSaveButton>
         </Box>
       </ThemeProvider>
     </>

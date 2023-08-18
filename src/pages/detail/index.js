@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Box, Typography, Checkbox  } from "@mui/material";
+import { Box, Typography, Checkbox } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { MuiButton } from '../../components/Button'
+import { MuiButton } from "../../components/Button";
 
 import { Link } from "react-router-dom";
 import close from "../../assets/icons/close.svg";
@@ -49,8 +49,8 @@ const Detail = () => {
                 fontSize: "20px",
               }}
             >
-              <Box sx={{display: "flex", justifyContent: 'space-between'}}>
-                <Box>Shipment</Box> <img src={close} alt="close"/>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Box>Shipment</Box> <img src={close} alt="close" />
               </Box>
               <Typography variant="subtitle1">
                 <Link className="link">9051304333-01</Link> Driver Instructions
@@ -63,7 +63,8 @@ const Detail = () => {
           <Box
             sx={{
               bgcolor: "background.paper",
-              boxShadow: '3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)',
+              boxShadow:
+                "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
               borderRadius: 2,
               p: 2,
               width: "100%",
@@ -90,7 +91,8 @@ const Detail = () => {
               padding: "20px",
               display: "flex",
               borderRadius: 2,
-              boxShadow: '3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)',
+              boxShadow:
+                "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
             }}
           >
             <Checkbox
@@ -103,18 +105,30 @@ const Detail = () => {
                   color: "#0B98DA",
                 },
                 borderRadius: 5,
+                paddingTop: "0px !important",
               }}
             />
             <Typography variant="subtitle2">
               I agree to allow clock work to access the phone functionalities
             </Typography>
           </Box>
-
-          <Box mt={3}>
-            <MuiButton><Link to={'/info/1'} style={{ color: 'white' }}>Acknowledge Instructions & Continue</Link></MuiButton>
-          </Box>
         </Box>
 
+        <Box
+          mt={3}
+          sx={{
+            margin: "64px 32px 30px",
+            width: "-webkit-fill-available",
+            position: "fixed",
+            bottom: "0",
+          }}
+        >
+          <MuiButton>
+            <Link to={"/info/1"} style={{ color: "white" }}>
+              Acknowledge Instructions & Continue
+            </Link>
+          </MuiButton>
+        </Box>
       </ThemeProvider>
     </>
   );

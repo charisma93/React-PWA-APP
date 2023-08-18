@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  Box,
-  Typography,
-  Divider,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import { Box, Typography, Divider, Select, MenuItem } from "@mui/material";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import {
   MuiBackButton,
@@ -194,24 +188,30 @@ const CheckingInfo = () => {
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>
             </Box>
           </Box>
+        </Box>
 
-          <Box
-            sx={{
-              marginTop: "64px",
-              display: "flex",
-              justifyContent: "space-around",
-            }}
-          >
-            <MuiBackButton>
-              <Link to={"/info/1"} style={{ color: "#0B98DA" }}> Back </Link>
-            </MuiBackButton>
-            <MuiSaveButton>
-              <Link to={"/info/4"} style={{ color: "white" }}>
-                {" "}
-                Save{" "}
-              </Link>
-            </MuiSaveButton>
-          </Box>
+        <Box
+          sx={{
+            margin: "64px 32px 30px",
+            display: "flex",
+            justifyContent: "space-between",
+            width: "-webkit-fill-available",
+            position: "fixed",
+            bottom: "0",
+          }}
+        >
+          <MuiBackButton>
+            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+              {" "}
+              Back{" "}
+            </Link>
+          </MuiBackButton>
+          <MuiSaveButton>
+            <Link to={"/info/4"} style={{ color: "white" }}>
+              {" "}
+              Save{" "}
+            </Link>
+          </MuiSaveButton>
         </Box>
       </ThemeProvider>
     </>

@@ -131,8 +131,13 @@ const Dashboard = () => {
                 variant="standard"
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
-                input={<SelectInput />}
+                input={<SelectInput style={{ marging: '10px' }} />}
                 disableUnderline
+                sx={{
+                  "& .MuiSvgIcon-root": {
+                    right: "8px",
+                  },
+                }}
               >
                 <MenuItem value={"1"} selected>
                   Yard Name
@@ -148,6 +153,12 @@ const Dashboard = () => {
                 defaultValue={"1"}
                 input={<SelectInput />}
                 disableUnderline
+                sx={{
+                  "& .MuiSvgIcon-root": {
+                    right: "8px",
+                  },
+                }}
+          
               >
                 <MenuItem value={"1"} selected>
                   Container
