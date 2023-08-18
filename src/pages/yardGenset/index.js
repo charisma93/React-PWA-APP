@@ -168,6 +168,7 @@ const YardGenSet = () => {
                   width={"100%"}
                   minRows={5}
                   className="text-area"
+                  placeholder="Input here"
                 />
               </Box>
             </Box>

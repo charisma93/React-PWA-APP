@@ -58,7 +58,7 @@ const Header = () => {
       <ThemeProvider theme={theme}>
         <Box sx={{ padding: "65px 32px 0px" }}>
           <AddPhotoButton>Click here to add POD</AddPhotoButton>
-          <Box sx={{ marginTop: '16px' }}><StyledTextarea minRows={15} aria-label="maximum height" /></Box>
+          <Box sx={{ marginTop: '16px' }}><StyledTextarea minRows={15} aria-label="maximum height" placeholder="Input here"/></Box>
         </Box>
       </ThemeProvider>
     </>

@@ -68,6 +68,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",
@@ -89,6 +90,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",
@@ -110,6 +112,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",
@@ -131,6 +134,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",
@@ -152,6 +156,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",
@@ -173,6 +178,7 @@ const ShipInfo = () => {
                 width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                placeholder="Type"
                 inputProps={{
                   sx: {
                     textAlign: "right",

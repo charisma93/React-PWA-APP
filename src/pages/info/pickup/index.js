@@ -178,7 +178,7 @@ const PickUp = () => {
                   alignItems: "center",
                   display: "flex",
                   width: "10%",
-                  justifyContent: "center",
+                  justifyContent: "end",
                 }}
               >
                 <Select
