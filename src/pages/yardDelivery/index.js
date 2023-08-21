@@ -59,7 +59,7 @@ const YardDelivery = () => {
             </Box>
           </Box>
         </header>
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 32px 0px 32px", height: '100vh' }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -164,7 +164,6 @@ const YardDelivery = () => {
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>
             </Box>
           </Box>
-        </Box>
 
         <div className="delivery-footer">
           <MuiBackButton>
@@ -180,6 +179,7 @@ const YardDelivery = () => {
             </Link>
           </MuiSaveButton>
         </div>
+        </Box>
       </ThemeProvider>
     </>
   );

@@ -3,11 +3,7 @@ import { Box, Typography, Select, MenuItem } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import {
-  MuiBackButton,
-  MuiSaveButton,
-  PlusBtn,
-} from "../../components/Button";
+import { MuiBackButton, MuiSaveButton, PlusBtn } from "../../components/Button";
 import { Link } from "react-router-dom";
 import share from "../../assets/icons/share.svg";
 import flydown from "../../assets/icons/flydown.svg";
@@ -89,7 +85,7 @@ const Checks = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 32px 0px 32px", height: "100vh" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -147,7 +143,7 @@ const Checks = () => {
               marginTop: "15px",
             }}
           >
-            <Box sx={{ display: "flex", alignItems: 'center' }}>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
               <img src={genSett} alt="genSett" width={22} />
               <Typography variant="title" pl={2}>
                 Add Gen Sett
@@ -180,22 +176,22 @@ const Checks = () => {
               <AddIcon />
             </PlusBtn>
           </Box>
-        </Box>
 
-        <div className="footer">
-          <MuiBackButton>
-            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-              {" "}
-              Back{" "}
-            </Link>
-          </MuiBackButton>
-          <MuiSaveButton>
-            <Link to={"/yardcheck"} style={{ color: "white" }}>
-              {" "}
-              Skip{" "}
-            </Link>
-          </MuiSaveButton>
-        </div>
+          <div className="footer-final">
+            <MuiBackButton>
+              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+                {" "}
+                Back{" "}
+              </Link>
+            </MuiBackButton>
+            <MuiSaveButton>
+              <Link to={"/yardcheck"} style={{ color: "white" }}>
+                {" "}
+                Skip{" "}
+              </Link>
+            </MuiSaveButton>
+          </div>
+        </Box>
       </ThemeProvider>
     </>
   );

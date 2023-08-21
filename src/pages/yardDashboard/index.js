@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Typography, Select, MenuItem } from "@mui/material";
-import { MuiButton } from '../../components/Button'
+import { MuiButton } from "../../components/Button";
 import FormControl from "@mui/material/FormControl";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputBase from "@mui/material/InputBase";
@@ -32,7 +32,7 @@ const theme = createTheme({
       fontSize: 10,
       color: "#8492A7",
       textAlign: "start",
-    }
+    },
   },
 });
 
@@ -131,7 +131,7 @@ const Dashboard = () => {
                 variant="standard"
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
-                input={<SelectInput style={{ marging: '10px' }} />}
+                input={<SelectInput style={{ marging: "10px" }} />}
                 disableUnderline
                 sx={{
                   "& .MuiSvgIcon-root": {
@@ -158,7 +158,6 @@ const Dashboard = () => {
                     right: "8px",
                   },
                 }}
-          
               >
                 <MenuItem value={"1"} selected>
                   Container
@@ -171,7 +170,7 @@ const Dashboard = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "34px" }}>
+        <Box sx={{ padding: "34px", height: '100vh' }}>
           {[1, 2, 3].map((val, index) => (
             <Box
               sx={{
@@ -213,7 +212,7 @@ const Dashboard = () => {
                   }}
                 >
                   <Box sx={{ display: "flex", marginBottom: "6px" }}>
-                    <img src={car} alt="car"/>
+                    <img src={car} alt="car" />
                     <Typography variant="subtitle2" sx={{ marginLeft: "6px" }}>
                       Pick up Location
                     </Typography>
@@ -233,7 +232,7 @@ const Dashboard = () => {
                   }}
                 >
                   <Box sx={{ display: "flex", marginBottom: "6px" }}>
-                    <img src={location} alt="location"/>
+                    <img src={location} alt="location" />
                     <Typography variant="subtitle2" sx={{ marginLeft: "6px" }}>
                       Delivery Location
                     </Typography>
@@ -249,9 +248,13 @@ const Dashboard = () => {
           ))}
         </Box>
 
-        <div className="footer">
-          <MuiButton><Link to={'/finallogcheck'} style={{ color: 'white' }}>Continue</Link>  </MuiButton>
-        </div>
+          <div className="footer-dashboard">
+            <MuiButton>
+              <Link to={"/finallogcheck"} style={{ color: "white" }}>
+                Continue
+              </Link>{" "}
+            </MuiButton>
+          </div>
       </ThemeProvider>
     </>
   );

@@ -58,12 +58,14 @@ const CheckingInfo = () => {
                 justifyContent: "space-between",
               }}
             >
-              <Box>{is_checking ? "Checking Information" : "Departure information" }</Box>
+              <Box>
+                {is_checking ? "Checking Information" : "Departure information"}
+              </Box>
               <img src={share} alt="share" />
             </Box>
           </Box>
         </header>
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 32px 0px 32px", height: "100vh" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -75,10 +77,12 @@ const CheckingInfo = () => {
           >
             <Box sx={{ p: "14px 0px" }}>
               <Typography variant="title" mt={1}>
-                {is_checking ? "Last check" : "Last Check was done at DD/MM HH:MM" }
+                {is_checking
+                  ? "Last check"
+                  : "Last Check was done at DD/MM HH:MM"}
               </Typography>
               <Typography variant="subtitle1" mt={1} fontSize={12}>
-                {is_checking ? "Was done at dd/mm hh:mm <br />" : '' }
+                {is_checking ? "Was done at dd/mm hh:mm <br />" : ""}
                 Next scheduled check is at dd/mm HH:MM
                 <br />
                 <Link style={{ color: "#0B98DA" }}>Click here </Link>to add
@@ -190,30 +194,28 @@ const CheckingInfo = () => {
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>
             </Box>
           </Box>
-        </Box>
 
-        <Box
-          sx={{
-            margin: "64px 32px 30px",
-            display: "flex",
-            justifyContent: "space-between",
-            width: "-webkit-fill-available",
-            position: "fixed",
-            bottom: "0",
-          }}
-        >
-          <MuiBackButton>
-            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-              {" "}
-              Back{" "}
-            </Link>
-          </MuiBackButton>
-          <MuiSaveButton>
-            <Link to={"/info/4"} style={{ color: "white" }}>
-              {" "}
-              Save{" "}
-            </Link>
-          </MuiSaveButton>
+          <Box
+            sx={{
+              margin: "62px 0px 30px",
+              display: "flex",
+              justifyContent: "space-between",
+              bottom: "0",
+            }}
+          >
+            <MuiBackButton>
+              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+                {" "}
+                Back{" "}
+              </Link>
+            </MuiBackButton>
+            <MuiSaveButton>
+              <Link to={"/info/4"} style={{ color: "white" }}>
+                {" "}
+                Save{" "}
+              </Link>
+            </MuiSaveButton>
+          </Box>
         </Box>
       </ThemeProvider>
     </>

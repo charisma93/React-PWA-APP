@@ -19,8 +19,6 @@ const Content = (props) => {
             padding: "64px 32px 30px",
             display: "flex",
             justifyContent: "space-between",
-            width: '-webkit-fill-available',
-            position: 'fixed',
             bottom: '0'
           }}
         >
@@ -43,13 +41,11 @@ const Content = (props) => {
       ) : (
         <Box
           sx={{
-            padding: "64px 32px 30px",
-            width: '-webkit-fill-available',
-            position: 'fixed',
+            padding: "34px 32px 30px",
             bottom: '0'
           }}
         >
-          <Box mt={3}>
+          <Box >
             {id === "6" ? (
               <MuiButton>
                 <Link to={"/dashboard"} style={{ color: "white" }}>

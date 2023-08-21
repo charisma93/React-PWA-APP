@@ -44,7 +44,7 @@ const Checks = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 32px 0px 32px"}} >
 
           <Box
             sx={{

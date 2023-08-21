@@ -47,7 +47,7 @@ const ShipInfo = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 32px 0px 32px", height: "100vh" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -65,9 +65,9 @@ const ShipInfo = () => {
                 K+N #{" "}
               </Typography>
               <Input
-                width={"60%"}
                 disableUnderline={true}
                 autoFocus={true}
+                style={{ width: "60%" }}
                 placeholder="Type"
                 inputProps={{
                   sx: {
@@ -87,7 +87,7 @@ const ShipInfo = () => {
                 Truck #{" "}
               </Typography>
               <Input
-                width={"60%"}
+                style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
                 placeholder="Type"
@@ -109,7 +109,7 @@ const ShipInfo = () => {
                 Seal #{" "}
               </Typography>
               <Input
-                width={"60%"}
+                style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
                 placeholder="Type"
@@ -131,7 +131,7 @@ const ShipInfo = () => {
                 Load Time #{" "}
               </Typography>
               <Input
-                width={"60%"}
+                style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
                 placeholder="Type"
@@ -153,7 +153,7 @@ const ShipInfo = () => {
                 Return{" "}
               </Typography>
               <Input
-                width={"60%"}
+                style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
                 placeholder="Type"
@@ -175,7 +175,7 @@ const ShipInfo = () => {
                 Load Location{" "}
               </Typography>
               <Input
-                width={"60%"}
+                style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
                 placeholder="Type"
@@ -191,30 +191,28 @@ const ShipInfo = () => {
             </Box>
             <Divider />
           </Box>
-        </Box>
 
-        <Box
-          sx={{
-            padding: "64px 32px 30px",
-            display: "flex",
-            justifyContent: "space-between",
-            width: '-webkit-fill-available',
-            position: 'fixed',
-            bottom: '0'
-          }}
-        >
-          <MuiBackButton>
-            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-              {" "}
-              Back{" "}
-            </Link>
-          </MuiBackButton>
-          <MuiSaveButton>
-            <Link to={"/info/2"} style={{ color: "white" }}>
-              {" "}
-              Save{" "}
-            </Link>
-          </MuiSaveButton>
+          <Box
+            sx={{
+              padding: "64px 0px",
+              display: "flex",
+              justifyContent: "space-between",
+              bottom: "0",
+            }}
+          >
+            <MuiBackButton>
+              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+                {" "}
+                Back{" "}
+              </Link>
+            </MuiBackButton>
+            <MuiSaveButton>
+              <Link to={"/info/2"} style={{ color: "white" }}>
+                {" "}
+                Save{" "}
+              </Link>
+            </MuiSaveButton>
+          </Box>
         </Box>
       </ThemeProvider>
     </>

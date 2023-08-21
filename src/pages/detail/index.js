@@ -67,7 +67,6 @@ const Detail = () => {
                 "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
               borderRadius: 2,
               p: 2,
-              width: "100%",
               height: "326px",
             }}
           >
@@ -78,57 +77,51 @@ const Detail = () => {
               required.
             </Typography>
           </Box>
-        </div>
 
-        <Box
-          sx={{
-            padding: "0px 32px",
-          }}
-        >
           <Box
             sx={{
-              bgcolor: "#fff",
-              padding: "20px",
-              display: "flex",
-              borderRadius: 2,
-              boxShadow:
-                "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
+              marginTop: "67px",
             }}
           >
-            <Checkbox
-              checked={checked}
-              onChange={handleChange}
-              inputProps={{ "aria-label": "controlled" }}
+            <Box
               sx={{
-                color: "#0B98DA",
-                "&.Mui-checked": {
-                  color: "#0B98DA",
-                },
-                borderRadius: 5,
-                paddingTop: "0px !important",
+                bgcolor: "#fff",
+                padding: "20px",
+                display: "flex",
+                borderRadius: 2,
+                boxShadow:
+                  "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
               }}
-            />
-            <Typography variant="subtitle2">
-              I agree to allow clock work to access the phone functionalities
-            </Typography>
+            >
+              <Checkbox
+                checked={checked}
+                onChange={handleChange}
+                inputProps={{ "aria-label": "controlled" }}
+                sx={{
+                  color: "#0B98DA",
+                  "&.Mui-checked": {
+                    color: "#0B98DA",
+                  },
+                  borderRadius: 5,
+                  paddingTop: "0px !important",
+                }}
+              />
+              <Typography variant="subtitle2">
+                I agree to allow clock work to access the phone functionalities
+              </Typography>
+            </Box>
           </Box>
-        </Box>
 
-        <Box
-          mt={3}
-          sx={{
-            margin: "64px 32px 30px",
-            width: "-webkit-fill-available",
-            position: "fixed",
-            bottom: "0",
-          }}
-        >
-          <MuiButton>
-            <Link to={"/info/1"} style={{ color: "white" }}>
-              Acknowledge Instructions & Continue
-            </Link>
-          </MuiButton>
-        </Box>
+          <Box
+            mt={3}
+          >
+            <MuiButton>
+              <Link to={"/info/1"} style={{ color: "white" }}>
+                Acknowledge Instructions & Continue
+              </Link>
+            </MuiButton>
+          </Box>
+        </div>
       </ThemeProvider>
     </>
   );
