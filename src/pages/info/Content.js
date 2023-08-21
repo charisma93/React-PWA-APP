@@ -212,7 +212,7 @@ const Content = (props) => {
         </div>
 
         {/* success */}
-        {/* <Dialog onClose={handleClose} open={props.open}>
+        <Dialog onClose={handleClose}>
           <Box
             sx={{
               textAlign: "center",
@@ -229,7 +229,7 @@ const Content = (props) => {
               eiusmod tempor
             </Typography>
           </Box>
-        </Dialog> */}
+        </Dialog>
 
         {/* failed */}
         <Dialog open={props.open} onClose={handleClose}>
