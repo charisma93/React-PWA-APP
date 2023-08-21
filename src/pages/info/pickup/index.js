@@ -24,6 +24,7 @@ const theme = createTheme({
       color: "#8492A7",
       marginTop: "3px !important",
       textAlign: "start",
+      letterSpacing: 0
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -60,7 +61,7 @@ const PickUp = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box sx={{ padding: "65px 32px 0px 32px" }}>
+        <Box sx={{ padding: "65px 26px 0px 26px" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -170,6 +171,7 @@ const PickUp = () => {
                       color: "#0B98DA",
                     },
                     borderRadius: 5,
+                    paddingLeft: '0'
                   }}
                 />
               </Typography>

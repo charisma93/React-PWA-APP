@@ -16,7 +16,7 @@ const theme = createTheme({
   typography: {
     title: {
       fontFamily: "Poppins",
-      fontSize: 16,
+      fontSize: 14,
       fontWeight: 600,
       textAlign: "start",
     },
@@ -37,6 +37,8 @@ const theme = createTheme({
 });
 
 const CheckingInfo = () => {
+  const is_checking = false;
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -56,7 +58,7 @@ const CheckingInfo = () => {
                 justifyContent: "space-between",
               }}
             >
-              <Box>Checking Information</Box>
+              <Box>{is_checking ? "Checking Information" : "Departure information" }</Box>
               <img src={share} alt="share" />
             </Box>
           </Box>
@@ -73,10 +75,10 @@ const CheckingInfo = () => {
           >
             <Box sx={{ p: "14px 0px" }}>
               <Typography variant="title" mt={1}>
-                Last check
+                {is_checking ? "Last check" : "Last Check was done at DD/MM HH:MM" }
               </Typography>
               <Typography variant="subtitle1" mt={1} fontSize={12}>
-                Was done at dd/mm hh:mm <br />
+                {is_checking ? "Was done at dd/mm hh:mm <br />" : '' }
                 Next scheduled check is at dd/mm HH:MM
                 <br />
                 <Link style={{ color: "#0B98DA" }}>Click here </Link>to add

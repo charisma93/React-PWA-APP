@@ -78,5 +78,22 @@ const MuiButton = styled(Button)({
   },
 });
 
+
+const FaileButton = styled(Button)({
+  borderRadius: "40px",
+  borderColor: "#FF3B30",
+  fontSize: "14px",
+  backgroundColor: "#FF3B30",
+  color: "white",
+  width: "95px",
+  height: "40px",
+  padding: "13px, 37px, 13px, 37px",
+  textTransform: "none",
+  "&:hover": {
+    borderColor: "#FF3B30",
+    backgroundColor: "#FF3B30",
+  },
+});
+
 export default Button;
-export { MuiBackButton, MuiSaveButton, AddPhotoButton, PlusBtn, MuiButton };
+export { MuiBackButton, MuiSaveButton, AddPhotoButton, PlusBtn, MuiButton, FaileButton };

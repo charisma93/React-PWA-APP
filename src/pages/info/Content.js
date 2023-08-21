@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Box, Typography, Divider } from "@mui/material";
-import { createTheme, ThemeProvider  } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
 import Dialog from "@mui/material/Dialog";
+import { FaileButton } from "../../components/Button"
 import SuccessMark from "../../assets/marks/success_mark.png";
+import FaileMark from "../../assets/marks/faile.png";
 import "./info.scss";
 
 const theme = createTheme({
@@ -37,7 +39,7 @@ const Content = (props) => {
 
   const handleClose = () => {
     setTimeout(() => {
-      navigate("/shipinfo")  
+      navigate("/shipinfo");
     }, 1500);
   };
 
@@ -209,7 +211,8 @@ const Content = (props) => {
           </Box>
         </div>
 
-        <Dialog onClose={handleClose} open={props.open}>
+        {/* success */}
+        {/* <Dialog onClose={handleClose} open={props.open}>
           <Box
             sx={{
               textAlign: "center",
@@ -225,6 +228,37 @@ const Content = (props) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elite, sed do
               eiusmod tempor
             </Typography>
+          </Box>
+        </Dialog> */}
+
+        {/* failed */}
+        <Dialog open={props.open} onClose={handleClose}>
+          <Box
+            sx={{
+              textAlign: "center",
+              padding: "23px 17px 37px",
+              width: "230px",
+            }}
+          >
+            <Box mt={3}>
+              <img src={FaileMark} alt="mark" />
+            </Box>
+            <Typography variant="title">Failed to save</Typography>
+            <Typography mt={2} variant="subtitle1">
+              <span
+                style={{
+                  fontWeight: 700,
+                  fontFamily: "Poppins",
+                  fontSize: 13,
+                  color: "#536780",
+                }}
+              >
+                Oops!
+              </span>{" "}
+              we have encountered an unexpected error, please resubmit the
+              information.
+            </Typography>
+            <Box mt={2}><FaileButton onClick={() => handleClose()}>OK</FaileButton></Box>
           </Box>
         </Dialog>
       </ThemeProvider>
