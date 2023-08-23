@@ -9,58 +9,64 @@ const theme = createTheme({
   typography: {
     title: {
       fontSize: 18,
-      fontWeight: 600
+      fontWeight: 600,
     },
     subtitle1: {
       fontSize: 14,
-      color: '#8492A7'
+      color: "#8492A7",
     },
-  }
+  },
 });
 
 const Home = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <header>
-          <Box
-            sx={{
-              bgcolor: "#fff",
-              height: 70,
-            }}
-          >
+        <div> 
+          <header>
             <Box
               sx={{
-                p: "22px 22px 22px 32px",
-                fontFamily: "Poppins",
-                fontSize: "20px",
-                display: "flex",
-                justifyContent: "space-between",
+                bgcolor: "#fff",
+                height: 70,
               }}
             >
-              <Box>Text Message</Box>
-              <img src={share} alt="share" />
+              <Box
+                sx={{
+                  p: "22px 22px 22px 32px",
+                  fontFamily: "Poppins",
+                  fontSize: "20px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box>Text Message</Box>
+                <img src={share} alt="share" />
+              </Box>
             </Box>
-          </Box>
-        </header>
+          </header>
 
-        <div className="home-page">
-          <Box
-            sx={{
-              bgcolor: "background.paper",
-              boxShadow: '3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)',
-              borderRadius: 2,
-              p: 2,
-              textAlign:'center',
-              width: '100%'
-            }}
-          >
-            <Typography variant="title">Hi Alexandra</Typography>
-            <Typography variant="subtitle1" mt={1}>
-              you have been assigned shipment <Link to={'/detail'} className="link">9051304333-01</Link>, please click onthe
-              link and follow the instructions
-            </Typography>
-          </Box>
+          <div className="home-page">
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                boxShadow:
+                  "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
+                borderRadius: 2,
+                p: 2,
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              <Typography variant="title">Hi Alexandra</Typography>
+              <Typography variant="subtitle1" mt={1}>
+                you have been assigned shipment{" "}
+                <Link to={"/detail"} className="link">
+                  9051304333-01
+                </Link>
+                , please click onthe link and follow the instructions
+              </Typography>
+            </Box>
+          </div>
         </div>
 
         <footer></footer>

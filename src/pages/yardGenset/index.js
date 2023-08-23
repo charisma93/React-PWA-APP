@@ -59,7 +59,7 @@ const YardGenSet = () => {
             </Box>
           </Box>
         </header>
-        <Box sx={{ padding: "65px 32px 0px 32px", height: '100vh' }}>
+        <Box sx={{ padding: "65px 32px 0px 32px"}}>
           <Box
             sx={{
               bgcolor: "background.paper",

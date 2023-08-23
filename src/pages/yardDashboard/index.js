@@ -170,7 +170,7 @@ const Dashboard = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "34px", height: '100vh' }}>
+        <Box sx={{ padding: "34px" }}>
           {[1, 2, 3].map((val, index) => (
             <Box
               sx={{
