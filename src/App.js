@@ -13,35 +13,31 @@ import YardDelivery from "./pages/yardDelivery";
 import YardDashboard from "./pages/yardDashboard";
 import Login from "./pages/login";
 import Webcamera from "./pages/webcamera";
-import {Provider} from 'react-redux';
 
 import "./App.css";
 
 function App() {
-
   return (
-    <Provider>
-      <Router>
-        <div className="back-img">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/detail" element={<Detail />} />
-            <Route path="/info/:id" element={<InfoDetail />} />
-            <Route path="/shipinfo" element={<ShipInfo />} />
-            <Route path="/driverinfo" element={<DriverInfo />} />
-            <Route path="/checkinginfo" element={<CheckingInfo />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/finallogcheck" element={<FinalLogCheck />} />
-            <Route path="/yardcheck" element={<YardCheck />} />
-            <Route path="/yardDashboard" element={<YardDashboard />} />
-            <Route path="/yardgenset" element={<YardGenSet />} />
-            <Route path="/yarddelivery" element={<YardDelivery />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/Webcamera" element={<Webcamera />} />
-          </Routes>
-        </div>
-      </Router>
-    </Provider>
+    <Router>
+      <div className="back-img">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/info/:id" element={<InfoDetail />} />
+          <Route path="/shipinfo" element={<ShipInfo />} />
+          <Route path="/driverinfo" element={<DriverInfo />} />
+          <Route path="/checkinginfo" element={<CheckingInfo />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/finallogcheck" element={<FinalLogCheck />} />
+          <Route path="/yardcheck" element={<YardCheck />} />
+          <Route path="/yardDashboard" element={<YardDashboard />} />
+          <Route path="/yardgenset" element={<YardGenSet />} />
+          <Route path="/yarddelivery" element={<YardDelivery />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Webcamera" element={<Webcamera />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
