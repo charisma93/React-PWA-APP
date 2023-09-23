@@ -14,16 +14,13 @@ import YardDashboard from "./pages/yardDashboard";
 import Login from "./pages/login";
 import Webcamera from "./pages/webcamera";
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import reducers from './rd/index';
 
 import "./App.css";
 
 function App() {
-  const store = createStore(reducers, {}, applyMiddleware());
 
   return (
-    <Provider store={store}>
+    <Provider>
       <Router>
         <div className="back-img">
           <Routes>

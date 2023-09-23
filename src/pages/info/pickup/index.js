@@ -14,8 +14,6 @@ import "./pickup.scss";
 import { useNavigate } from "react-router-dom";
 import trashicon from "../../../assets/marks/trash.png";
 import cameraicon from "../../../assets/marks/Camera.png";
-import {connect} from 'react-redux';
-import  {takenImage} from '../../../rd/action';
 
 const theme = createTheme({
   typography: {
@@ -351,11 +349,6 @@ const PickUp = (props) => {
   );
 };
 
-const mapStateToProps = (state)=>{
-  const {url} = state.imgInfo;
-  return {url};
-}
-
-export default connect(mapStateToProps, takenImage) (PickUp);
+export default PickUp;
 
 
