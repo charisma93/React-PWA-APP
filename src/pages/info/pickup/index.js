@@ -288,7 +288,6 @@ const PickUp = (props) => {
                         borderRadius: 10,
                         marginTop: "13px",
                       }}
-                      alt="camera"
                     />
 
                     <Box

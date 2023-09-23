@@ -8,7 +8,6 @@ import {
 } from "../../components/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import share from "../../assets/icons/share.svg";
 import "./checkingInfo.scss";
