@@ -1,4 +1,4 @@
-import React,{ useState} from "react";
+import React from "react";
 import { Box, Typography, Divider, Select, MenuItem } from "@mui/material";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import {
@@ -41,7 +41,6 @@ const theme = createTheme({
 
 const CheckingInfo = () => {
   const is_checking = false;
-  const navigate = useNavigate();
 
   return (
     <>

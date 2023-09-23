@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Box, Typography, Select, MenuItem } from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import { MuiButton } from "../../components/Button";
 import FormControl from "@mui/material/FormControl";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputBase from "@mui/material/InputBase";
 import InputAdornment from "@mui/material/InputAdornment";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
@@ -12,7 +11,6 @@ import logoicon from "../../assets/icons/Login.png";
 import eyeicon from "../../assets/icons/eye_hide.png";
 
 import "./index.scss";
-import { Link } from "react-router-dom";
 
 const theme = createTheme({
   typography: {
@@ -21,16 +19,6 @@ const theme = createTheme({
       fontWeight: 600,
       textAlign: "start",
     },
-    // subtitle1: {
-    //   fontSize: 12,
-    //   color: "#8492A7",
-    //   textAlign: "start",
-    // },
-    // subtitle2: {
-    //   fontSize: 10,
-    //   color: "#8492A7",
-    //   textAlign: "start",
-    // },
   },
 });
 
@@ -44,7 +32,6 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     fontSize: 14,
     paddingLeft: "35px",
     paddingRight: "35px",
-    // padding: "8px 16px",
     color: "#536780",
     transition: theme.transitions.create([
       "border-color",
@@ -55,25 +42,6 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const SelectInput = styled(InputBase)(({ theme }) => ({
-  "& .MuiInputBase-input": {
-    height: "30px",
-    width: "117px",
-    borderRadius: 28,
-    position: "relative",
-    backgroundColor: "#FFFF",
-    border: "1px solid #DDDDDD",
-    fontSize: 14,
-    padding: "8px 16px",
-    color: "#536780",
-    transition: theme.transitions.create([
-      "border-color",
-      "background-color",
-      "box-shadow",
-    ]),
-    "&:focus": {},
-  },
-}));
 
 const Login = () => {
   return (
@@ -82,7 +50,7 @@ const Login = () => {
         <Box sx = {{marginTop: "108px", display: "flex",paddingLeft: "40px",paddingRight: "40px"}}>
           <Box sx = {{marginTop: "117px",bgcolor : "#fff",justifyContent: "center",fontFamily: "Poppins",width: "100%",height: "393px",borderRadius: "10px"}} >
             <Box sx={{display: "flex",justifyContent: "center"}}>
-              <img src={logoicon} style={{width:"58px",height: "56px",marginTop: "25px"}} />
+              <img src={logoicon} style={{width:"58px",height: "56px",marginTop: "25px"}} alt="icon" />
             </Box>
 
               <Typography variant="subtitle1" mt={1} fontSize={"20px"} fontStyle={"normal"} fontWeight={"600"} color={"#080808"} marginLeft={"26px"}>
@@ -102,16 +70,9 @@ const Login = () => {
                     <InputAdornment
                       sx={{ position: "absolute", left: 0, padding: "10px",zIndex: 1 }}
                     >
-                      <img src={profileIcon} />
+                      <img src={profileIcon} alt="icon" />
                     </InputAdornment>
                   }
-                  // endAdornment={
-                  //   <InputAdornment
-                  //     sx={{ position: "absolute", right: 0, padding: "16px" }}
-                  //   >
-                  //     <img src={eyeicon} />
-                  //   </InputAdornment>
-                  // }
                 />
               </FormControl>
 
@@ -123,14 +84,14 @@ const Login = () => {
                     <InputAdornment
                       sx={{ position: "absolute", left: 0, padding: "10px", zIndex: 1 }}
                     >
-                      <img src={lockIcon} />
+                      <img src={lockIcon}  alt="icon"/>
                     </InputAdornment>
                   }
                   endAdornment={
                     <InputAdornment
                       sx={{ position: "absolute", right: 0, padding: "16px" }}
                     >
-                      <img src={eyeicon} />
+                      <img src={eyeicon}  alt="icon"/>
                     </InputAdornment>
                   }
                 />

@@ -58,13 +58,13 @@ const AddPhotoButton = styled(Button)({
 
 const PickUp = (props) => {  
   let isViewPhoto = false;
-  if(localStorage.getItem('cam_set') == 1)
+  if(localStorage.getItem('cam_set') === 1)
     isViewPhoto = true;
 
   const navigate = useNavigate();
   const [checked, setChecked] = React.useState(true);
 
-  const [ViewPhoto, setIsViewPhoto] = React.useState(false);
+  // const [ViewPhoto, setIsViewPhoto] = React.useState(false);
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
@@ -288,6 +288,7 @@ const PickUp = (props) => {
                         borderRadius: 10,
                         marginTop: "13px",
                       }}
+                      alt="camera"
                     />
 
                     <Box
@@ -310,10 +311,11 @@ const PickUp = (props) => {
                         onClick={() => {
                           isViewPhoto = false;
                           
-                          setIsViewPhoto(true);
+                          // setIsViewPhoto(true);
                           localStorage.removeItem('img_data');
                           localStorage.removeItem('cam_set');
                         }}
+                        alt="camera"
                       />
                     </Box>
                   </Box>
@@ -337,6 +339,7 @@ const PickUp = (props) => {
                       localStorage.removeItem('cam_set');
                         navigate("/Webcamera");
                       }}
+                      alt="camera"
                     />
                   </Box>
                 </Box>

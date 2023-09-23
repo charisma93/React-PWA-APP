@@ -1,6 +1,5 @@
-import React,{ useState,useEffect, useCallback} from "react";
-import { Box, Button, Typography } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import React,{ useState} from "react";
+import { Box } from "@mui/material";
 import Webcam from "react-webcam";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
@@ -8,18 +7,6 @@ import ellpseIcon from "../../assets/icons/ellpse_btn.png";
 import switchIcon from "../../assets/icons/Switch_btn.png"
 import headerimg from "../../assets/icons/headeImg.png";
 
-const theme = createTheme({
-  typography: {
-    title: {
-      fontSize: 18,
-      fontWeight: 600,
-    },
-    subtitle1: {
-      fontSize: 14,
-      color: "#8492A7",
-    },
-  },
-});
 
 const Webcamera = () => {
 
@@ -28,6 +15,7 @@ const Webcamera = () => {
   const navigate = useNavigate();
   const [capturedImage, setCapturedImage] = useState(null);
 
+  console.log(capturedImage)
 
   const add_photo =  () => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -59,7 +47,7 @@ const Webcamera = () => {
               height: 44,
             }}
           >
-            <img src= {headerimg} />
+            <img src= {headerimg} alt="camera"/>
           </Box>
         </header>
 
@@ -85,12 +73,14 @@ const Webcamera = () => {
               src={ellpseIcon}
               style={{marginTop: "66px"}}
               onClick={() =>add_photo()}
+              alt="camera"
             />
 
             <img
               src={switchIcon}
               style={{position: "absolute", right: "24px", bottom: "10px"}}
               onClick={() =>add_photo()}
+              alt="camera"
             />
           </Box>
     

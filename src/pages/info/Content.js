@@ -4,9 +4,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
 import Dialog from "@mui/material/Dialog";
-import { FaileButton } from "../../components/Button"
+// import { FaileButton } from "../../components/Button"
 import SuccessMark from "../../assets/marks/success_mark.png";
-import FaileMark from "../../assets/marks/faile.png";
+// import FaileMark from "../../assets/marks/faile.png";
 import "./info.scss";
 
 const theme = createTheme({
