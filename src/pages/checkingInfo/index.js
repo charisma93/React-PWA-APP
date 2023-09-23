@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{ useState} from "react";
 import { Box, Typography, Divider, Select, MenuItem } from "@mui/material";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import {
@@ -8,9 +8,12 @@ import {
 } from "../../components/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import share from "../../assets/icons/share.svg";
 import "./checkingInfo.scss";
+
+
 
 const theme = createTheme({
   typography: {
@@ -38,6 +41,7 @@ const theme = createTheme({
 
 const CheckingInfo = () => {
   const is_checking = false;
+  const navigate = useNavigate();
 
   return (
     <>
@@ -190,9 +194,15 @@ const CheckingInfo = () => {
               </Box>
             </Box>
 
+            
+          </Box>
+
+          <Box>
+            
             <Box sx={{ pb: "35px", textAlign: "center" }}>
-              <AddPhotoButton>Click here to add Photo</AddPhotoButton>
+              <AddPhotoButton >Click here to add Photo</AddPhotoButton>
             </Box>
+            
           </Box>
 
           <Box
@@ -221,5 +231,6 @@ const CheckingInfo = () => {
     </>
   );
 };
+
 
 export default CheckingInfo;

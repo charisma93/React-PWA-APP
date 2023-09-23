@@ -58,7 +58,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 const SelectInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
     height: "30px",
-    width: "117px",
+    width: "100%",
     borderRadius: 28,
     position: "relative",
     backgroundColor: "#FFFF",
@@ -121,21 +121,19 @@ const Dashboard = () => {
 
             <Box
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                padding: "0px 32px",
-                paddingBottom: "18px",
+                padding: "0px 22px 22px 32px",
+
               }}
             >
               <Select
                 variant="standard"
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
-                input={<SelectInput style={{ marging: "10px" }} />}
+                input={<SelectInput style={{ marging: "10px", width: "100%" }} />}
                 disableUnderline
                 sx={{
                   "& .MuiSvgIcon-root": {
-                    right: "8px",
+                    right: "2px",
                   },
                 }}
               >
@@ -147,7 +145,7 @@ const Dashboard = () => {
                 <MenuItem value={"4"}>25 °C</MenuItem>
               </Select>
 
-              <Select
+              {/* <Select
                 variant="standard"
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
@@ -165,13 +163,13 @@ const Dashboard = () => {
                 <MenuItem value={"2"}>45 °C </MenuItem>
                 <MenuItem value={"3"}>35 °C</MenuItem>
                 <MenuItem value={"4"}>25 °C</MenuItem>
-              </Select>
+              </Select> */}
             </Box>
           </Box>
         </header>
 
         <Box sx={{ padding: "34px" }}>
-          {[1, 2, 3].map((val, index) => (
+          {[1].map((val, index) => (
             <Box
               sx={{
                 bgcolor: "background.paper",

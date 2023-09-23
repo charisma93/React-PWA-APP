@@ -233,7 +233,7 @@ const Content = (props) => {
 
         {/* failed */}
         <Dialog open={props.open} onClose={handleClose}>
-          <Box
+          {/* <Box
             sx={{
               textAlign: "center",
               padding: "23px 17px 37px",
@@ -259,6 +259,22 @@ const Content = (props) => {
               information.
             </Typography>
             <Box mt={2}><FaileButton onClick={() => handleClose()}>OK</FaileButton></Box>
+          </Box> */}
+          <Box
+            sx={{
+              textAlign: "center",
+              padding: "23px 17px 37px",
+              width: "250px",
+            }}
+          >
+            <Box>
+              <img src={SuccessMark} alt="mark" />
+            </Box>
+            <Typography variant="title">Save Success</Typography>
+            <Typography mt={2} variant="subtitle1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elite, sed do
+              eiusmod tempor
+            </Typography>
           </Box>
         </Dialog>
       </ThemeProvider>

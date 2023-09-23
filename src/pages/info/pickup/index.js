@@ -11,6 +11,11 @@ import {
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./pickup.scss";
+import { useNavigate } from "react-router-dom";
+import trashicon from "../../../assets/marks/trash.png";
+import cameraicon from "../../../assets/marks/Camera.png";
+import {connect} from 'react-redux';
+import  {takenImage} from '../../../rd/action';
 
 const theme = createTheme({
   typography: {
@@ -24,7 +29,7 @@ const theme = createTheme({
       color: "#8492A7",
       marginTop: "3px !important",
       textAlign: "start",
-      letterSpacing: 0
+      letterSpacing: 0,
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -51,9 +56,15 @@ const AddPhotoButton = styled(Button)({
   },
 });
 
-const PickUp = () => {
+const PickUp = (props) => {  
+  let isViewPhoto = false;
+  if(localStorage.getItem('cam_set') == 1)
+    isViewPhoto = true;
+
+  const navigate = useNavigate();
   const [checked, setChecked] = React.useState(true);
 
+  const [ViewPhoto, setIsViewPhoto] = React.useState(false);
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
@@ -171,7 +182,7 @@ const PickUp = () => {
                       color: "#0B98DA",
                     },
                     borderRadius: 5,
-                    paddingLeft: '0'
+                    paddingLeft: "0",
                   }}
                 />
               </Typography>
@@ -253,7 +264,83 @@ const PickUp = () => {
             <Divider />
 
             <Box sx={{ pt: "17px" }}>
-              <AddPhotoButton>Click here to add Photo</AddPhotoButton>
+              {!isViewPhoto && (
+                <AddPhotoButton
+                  onClick={() => {
+                    isViewPhoto = true;  
+                    navigate('/webcamera');
+                  }}
+                >
+                  Click here to add Photo
+                </AddPhotoButton>
+              )}
+              
+              {isViewPhoto && (
+                
+                <Box>
+                  <Box style={{ position: "relative" }}>
+                    <img
+                      src={localStorage.getItem('img_data')}
+                      alt="Captured"
+                      style={{
+                        width: "100%",
+                        height: "183px",
+                        borderRadius: 10,
+                        marginTop: "13px",
+                      }}
+                    />
+
+                    <Box
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        position: "absolute",
+                        right: "11px",
+                        top: "24px",
+                        backgroundColor: "#ffffff",
+                        width: "36px",
+                        height: "36px",
+                        borderRadius: "50%",
+                      }}
+                    >
+                      <img
+                        src={trashicon}
+                        style={{ width: 15, height: 15 }}
+                        onClick={() => {
+                          isViewPhoto = false;
+                          
+                          setIsViewPhoto(true);
+                          localStorage.removeItem('img_data');
+                          localStorage.removeItem('cam_set');
+                        }}
+                      />
+                    </Box>
+                  </Box>
+
+                  <Box
+                    style={{
+                      marginTop: "14px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography variant="subtitle1" mt={1} width={"90%"}>
+                      Retake a photo
+                    </Typography>
+
+                    <img
+                      src={cameraicon}
+                      onClick={() => {
+                      isViewPhoto = false;
+                    
+                      localStorage.removeItem('cam_set');
+                        navigate("/Webcamera");
+                      }}
+                    />
+                  </Box>
+                </Box>
+              )}
             </Box>
           </Box>
         </Box>
@@ -262,4 +349,11 @@ const PickUp = () => {
   );
 };
 
-export default PickUp;
+const mapStateToProps = (state)=>{
+  const {url} = state.imgInfo;
+  return {url};
+}
+
+export default connect(mapStateToProps, takenImage) (PickUp);
+
+

@@ -8,8 +8,14 @@ import {
   Input,
 } from "@mui/material";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import Calendar from '../../../assets/icons/calendar.svg'
+import Calendar from "../../../assets/icons/calendar.svg";
 import "./index.scss";
+
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import moment from "moment";
+
 
 const theme = createTheme({
   typography: {
@@ -52,6 +58,11 @@ const AddPhotoButton = styled(Button)({
 });
 
 const DeliveryDetail = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+  const [value, setValue] = React.useState("");
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -177,8 +188,10 @@ const DeliveryDetail = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
+                value={moment(value).format('YYYY-MM-DD, h:mm:ss a')}
               />
-              <img src={Calendar} alt="calendar"/>
+              <img src={Calendar} alt="calendar" 
+                onClick={() => setIsOpen(true)}/>
             </Box>
             <Divider />
 
@@ -191,10 +204,96 @@ const DeliveryDetail = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
+                value={moment(value).format('YYYY-MM-DD, h:mm:ss a')}
               />
-              <img src={Calendar} alt="calendar"/>
+              <img
+                src={Calendar}
+                alt="calendar"
+                onClick={() => setIsOpen(true)}
+              />
             </Box>
             <Divider />
+
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                open={isOpen}
+                onClose={handleClose}
+                onOpen={handleOpen}
+                onChange={(newDate) => {
+                  console.log(newDate)
+                  setValue(newDate);
+                }}
+                inputFormat="MM-dd-yyyy"
+                views={["day"]}
+                slotProps={{
+                  field: { sx: {
+                    display: 'none'
+                  } },
+                  toolbar: {
+                    hidden: true,
+                  },
+                  dialog: {
+                    sx: {
+                      ".MuiPaper-root": {
+                        borderRadius: "20px !important",
+                        boxShadow:
+                          "0px 11.52456px 17.28684px 0px rgba(20, 20, 22, 0.24)",
+                      },
+                    },
+                  },
+                  calendarHeader: {
+                    sx: {
+                      ".MuiPickersCalendarHeader-root": {
+                        display: "flex",
+                        alignItems: "center",
+                        justifyItems: "center",
+                      },
+                      ".MuiPickersArrowSwitcher-root": {
+                        display: "inline-flex",
+                      },
+                      ".MuiPickersCalendarHeader-label": {
+                        textAlign: "center !important",
+                        display: "flex",
+                        position: "absolute",
+                        paddingLeft: "80px",
+                      },
+                      ".MuiPickersArrowSwitcher-spacer": {
+                        width: "230px",
+                      },
+                    },
+                  },
+                  actionBar: {
+                    sx: {
+                      justifyContent: "space-around",
+                      ".MuiButtonBase-root:first-child": {
+                        display: "flex",
+                        width: "128px",
+                        padding: "13px 37px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "10px",
+                        borderRadius: "40px",
+                        background: "#CEEAF8",
+                        color: "white",
+                        marginBottom: "35px",
+                      },
+                      ".MuiButtonBase-root": {
+                        display: "flex",
+                        width: "128px",
+                        padding: "13px 37px",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "10px",
+                        borderRadius: "40px",
+                        background: "#0B98DA",
+                        color: "white",
+                        marginBottom: "35px",
+                      },
+                    },
+                  },
+                }}
+              />
+            </LocalizationProvider>
 
             <Box sx={{ pb: "35px", pt: "20px", textAlign: "center" }}>
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>

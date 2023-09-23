@@ -48,7 +48,7 @@ const Content = (props) => {
           <Box >
             {id === "6" ? (
               <MuiButton>
-                <Link to={"/dashboard"} style={{ color: "white" }}>
+                <Link to={"/login"} style={{ color: "white" }}>
                   Click here to complete shipment
                 </Link>
               </MuiButton>

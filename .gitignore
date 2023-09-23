@@ -11,6 +11,8 @@
 # production
 /build
 
+.my-app.zip
+
 # misc
 .DS_Store
 .env.local
