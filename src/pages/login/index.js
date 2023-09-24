@@ -162,7 +162,7 @@ const Login = () => {
 
             <Box sx={{ padding: "26px" }}>
               <MuiButton>
-                <Link to={"/yardcheck"} style={{ color: "white" }}>
+                <Link to={"/yardDashboard"} style={{ color: "white" }}>
                   Login
                 </Link>
               </MuiButton>
