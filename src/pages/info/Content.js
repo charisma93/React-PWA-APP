@@ -19,6 +19,8 @@ const theme = createTheme({
       fontFamily: "Poppins",
       fontSize: 13,
       color: "#536780",
+      alignItems: "center",
+      display: "flex",
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -26,10 +28,11 @@ const theme = createTheme({
       color: "#000000",
       lineHeight: "16px",
       fontWeight: 600,
-      width: "50%",
+      width: "48%",
       alignItems: "center",
       display: "flex",
       justifyContent: "end",
+      textAlign: "right",
     },
   },
 });
@@ -61,8 +64,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -78,8 +81,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -95,8 +98,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" width={"50%"}>
@@ -112,8 +115,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -129,8 +132,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" width={"50%"}>
@@ -146,8 +149,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -163,8 +166,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -180,8 +183,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -197,8 +200,8 @@ const Content = (props) => {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                pt: "16px",
-                pb: "18px",
+                pt: "15px",
+                pb: "15px",
               }}
             >
               <Typography variant="subtitle1" witdth={"50%"}>
@@ -212,7 +215,7 @@ const Content = (props) => {
         </div>
 
         {/* success */}
-        <Dialog onClose={handleClose}>
+        <Dialog onClose={handleClose} open={false}>
           <Box
             sx={{
               textAlign: "center",

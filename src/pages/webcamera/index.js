@@ -14,12 +14,10 @@ const Webcamera = () => {
   const webcamRef = React.useRef(null);
   const navigate = useNavigate();
   const [capturedImage, setCapturedImage] = useState(null);
-
-  console.log(capturedImage)
-
   const add_photo =  () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
+    localStorage.setItem('capture',capturedImage);
     setTimeout(() => {
       localStorage.setItem("img_data",imageSrc);
       localStorage.setItem("cam_set",1);

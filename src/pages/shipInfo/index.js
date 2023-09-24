@@ -175,6 +175,7 @@ const ShipInfo = () => {
                 Load Location{" "}
               </Typography>
               <Input
+                
                 style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}

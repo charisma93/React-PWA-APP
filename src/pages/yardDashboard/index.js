@@ -110,6 +110,7 @@ const Dashboard = () => {
                   placeholder="Search"
                   endAdornment={
                     <InputAdornment
+                      position="start"
                       sx={{ position: "absolute", right: 0, padding: "16px" }}
                     >
                       <SearchIcon />
@@ -130,7 +131,7 @@ const Dashboard = () => {
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
                 input={<SelectInput style={{ marging: "10px", width: "100%" }} />}
-                disableUnderline
+                // disableUnderline
                 sx={{
                   "& .MuiSvgIcon-root": {
                     right: "2px",
@@ -169,7 +170,7 @@ const Dashboard = () => {
         </header>
 
         <Box sx={{ padding: "34px" }}>
-          {[1].map((val, index) => (
+          {/* {[1].map((val, index) => ( */}
             <Box
               sx={{
                 bgcolor: "background.paper",
@@ -193,7 +194,7 @@ const Dashboard = () => {
                 </Box>
               </Box>
               <Box
-                key={index}
+                key={1}
                 sx={{
                   display: "flex",
                   width: "100%",
@@ -243,7 +244,7 @@ const Dashboard = () => {
                 </Box>
               </Box>
             </Box>
-          ))}
+           {/* ))} */}
         </Box>
 
           <div className="footer-dashboard">

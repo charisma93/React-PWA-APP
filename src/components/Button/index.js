@@ -8,7 +8,6 @@ const MuiBackButton = styled(Button)({
   backgroundColor: "#CEEAF8",
   color: "#0B98DA",
   width: "47%",
-  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
   "&:hover": {
@@ -24,7 +23,6 @@ const MuiSaveButton = styled(Button)({
   backgroundColor: "#0B98DA",
   color: "white",
   width: "47%",
-  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
   "&:hover": {
@@ -40,7 +38,6 @@ const AddPhotoButton = styled(Button)({
   backgroundColor: "#E7FAF5",
   border: "1px solid #09C792",
   color: "#09C792",
-  height: "37px",
   padding: "8px 37px",
   "&:hover": {
     backgroundColor: "#E7FAF5",
@@ -69,15 +66,14 @@ const MuiButton = styled(Button)({
   backgroundColor: "#0B98DA",
   color: "white",
   width: "100%",
-  height: "37px",
   padding: "13px 34px",
   textTransform: "none",
+  fontWeight: "bold",
   "&:hover": {
     backgroundColor: "#0B98DA",
     borderColor: "#0B98DA",
   },
 });
-
 
 const FaileButton = styled(Button)({
   borderRadius: "40px",
@@ -96,4 +92,11 @@ const FaileButton = styled(Button)({
 });
 
 export default Button;
-export { MuiBackButton, MuiSaveButton, AddPhotoButton, PlusBtn, MuiButton, FaileButton };
+export {
+  MuiBackButton,
+  MuiSaveButton,
+  AddPhotoButton,
+  PlusBtn,
+  MuiButton,
+  FaileButton,
+};
