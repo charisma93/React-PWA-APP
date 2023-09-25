@@ -98,7 +98,7 @@ const CheckingInfo = () => {
                   : "Last Check was done at DD/MM HH:MM"}
               </Typography>
               <Typography variant="subtitle1" mt={1} fontSize={12}>
-                {is_checking ? "Was done at dd/mm hh:mm <br />" : ""}
+                {!is_checking ? "Was done at dd/mm hh:mm <br />" : ""}
                 Next scheduled check is at dd/mm HH:MM
                 <br />
                 <Link style={{ color: "#0B98DA" }}>Click here </Link>to add

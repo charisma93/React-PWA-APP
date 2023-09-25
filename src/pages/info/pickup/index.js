@@ -54,6 +54,8 @@ const theme = createTheme({
       marginTop: "3px !important",
       textAlign: "start",
       letterSpacing: 0,
+      display: "flex",
+      alignItems: "center"
     },
     subtitle2: {
       fontFamily: "Poppins",

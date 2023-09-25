@@ -89,8 +89,8 @@ const YardDelivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Date
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"}>
-                06 - 15 - 23
+              <Typography variant="subtitle2" mt={1} width={"70%"} sx={{ color: 'red' }}>
+                06/15/2023
               </Typography>
             </Box>
             <Divider />
@@ -180,11 +180,14 @@ const YardDelivery = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY-MM-DD")}
+                      value={moment(value).format("DD/MM/YYYY")}
                       inputProps={{
                         sx: {
                           textAlign: "end",
                           paddingRight: "5px",
+                          color: "red",
+                          fontSize: "14px",
+                          fontWeight: "bold"
                         },
                       }}
                     />
@@ -238,11 +241,14 @@ const YardDelivery = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY-MM-DD")}
+                      value={moment(value).format("DD/MM/YYYY")}
                       inputProps={{
                         sx: {
                           textAlign: "end",
                           paddingRight: "5px",
+                          color: "red",
+                          fontSize: "14px",
+                          fontWeight: "bold"
                         },
                       }}
                     />

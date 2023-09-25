@@ -133,7 +133,6 @@ const Dashboard = () => {
                 IconComponent={ExpandMoreIcon}
                 defaultValue={"1"}
                 input={<SelectInput style={{ marging: "10px", width: "100%" }} />}
-                // disableUnderline
                 sx={{
                   "& .MuiSvgIcon-root": {
                     right: "12px",

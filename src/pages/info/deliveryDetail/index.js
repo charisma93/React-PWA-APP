@@ -121,7 +121,7 @@ const DeliveryDetail = () => {
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Date
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"30%"}>
+              <Typography variant="subtitle2" mt={1} width={"30%"} sx={{ color: 'red' }}>
                 06/15/2023
               </Typography>
               <div className="divider-line" />
@@ -130,7 +130,7 @@ const DeliveryDetail = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format("YYYY/MM/DD")}
+                value={moment(value).format("DD/MM/YYYY")}
                 sx={{
                   textAlign: "right",
                   fontFamily: "Poppins",
@@ -322,7 +322,7 @@ const DeliveryDetail = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY/MM/DD")}
+                      value={moment(value).format("DD/MM/YYYY")}
                       sx={{
                         width: '100%',
                         textAlign: "end",
@@ -384,7 +384,7 @@ const DeliveryDetail = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY/MM/DD")}
+                      value={moment(value).format("DD/MM/YYYY")}
                       sx={{
                         width: '100%',
                         textAlign: "right",

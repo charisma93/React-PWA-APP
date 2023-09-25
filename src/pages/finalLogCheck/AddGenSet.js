@@ -95,7 +95,7 @@ const AddGenSet = () => {
                   disableUnderline={true}
                   autoFocus={true}
                   className="input-box"
-                  value={moment(value).format("YYYY-MM-DD")}
+                  value={moment(value).format("DD/MM/YYYY")}
                   inputProps={{
                     sx: {
                       color: "#080808",
