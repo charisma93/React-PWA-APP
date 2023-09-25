@@ -68,7 +68,12 @@ const MuiButton = styled(Button)({
   width: "100%",
   padding: "13px 34px",
   textTransform: "none",
-  fontWeight: "bold",
+  fontFamily: "Poppins",
+  fontStyle: "normal",
+  fontWeight: 600,
+  lineHeight: "normal",
+  letterSpacing: "-0.28px",
+
   "&:hover": {
     backgroundColor: "#0B98DA",
     borderColor: "#0B98DA",
@@ -91,6 +96,21 @@ const FaileButton = styled(Button)({
   },
 });
 
+const CaptureButton = styled(Button)({
+  width: "60px",
+  height: "60px",
+  flexShrink: 0,
+  background: "linear-gradient(146deg, #FF6B00 14.63%, #FF3D00 86.13%)",
+  strokeWidth: "1px",
+  stroke: "rgba(255, 255, 255, 0.30)",
+  borderRadius: '50%',
+  "&:hover": {
+    borderColor: "#FF3B30",
+    backgroundColor: "#FF3B30",
+  },
+});
+
+
 export default Button;
 export {
   MuiBackButton,
@@ -99,4 +119,5 @@ export {
   PlusBtn,
   MuiButton,
   FaileButton,
+  CaptureButton
 };

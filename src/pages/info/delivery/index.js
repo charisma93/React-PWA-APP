@@ -4,8 +4,18 @@ import {
   Typography,
   Divider,
   Button,
+  Input,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+import Calendar from "../../../assets/icons/calendar.svg";
+
+import moment from "moment";
 
 const theme = createTheme({
   typography: {
@@ -21,6 +31,7 @@ const theme = createTheme({
       color: "#8492A7",
       marginTop: "3px !important",
       textAlign: "start",
+      letterSpacing: 0,
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -47,6 +58,11 @@ const AddPhotoButton = styled(Button)({
 });
 
 const Delivery = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+  const [value, setValue] = React.useState(moment.now());
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -71,9 +87,27 @@ const Delivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Supply Arir Temp
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"}>
-                06 - 15 - 23
-              </Typography>
+              <Input
+                placeholder="( Print Name/Signature )"
+                disableUnderline={true}
+                autoFocus={true}
+                className="input-box"
+                value={moment(value).format("YYYY-MM-DD, h:mm:ss a")}
+                sx={{
+                  color: "#080808",
+                  textAlign: "right",
+                  fontFamily: "Poppins",
+                  fontSize: "13px",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  lineHeight: "normal",
+                }}
+              />
+              <img
+                src={Calendar}
+                alt="calendar"
+                onClick={() => setIsOpen(true)}
+              />
             </Box>
             <Divider />
 
@@ -81,9 +115,27 @@ const Delivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Supply Temp
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"}>
-                45 °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "60%" }}
+                placeholder="Type  °C"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#8492A7",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -91,9 +143,27 @@ const Delivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Return Temp
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"}>
-                45 °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "60%" }}
+                placeholder="Type  °C"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#8492A7",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
@@ -101,9 +171,35 @@ const Delivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Fuel Level
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"}>
-                1/4
-              </Typography>
+              <Box
+                sx={{
+                  alignItems: "end",
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "end",
+                }}
+              >
+                <Select
+                  variant="standard"
+                  IconComponent={ExpandMoreIcon}
+                  defaultValue={"3"}
+                  disableUnderline
+                  sx={{
+                    ".MuiSvgIcon-root": {
+                      paddingRight: "0px !important",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins",
+                  }}
+                >
+                  <MenuItem value={"1"} selected>
+                    1/4 Tank
+                  </MenuItem>
+                  <MenuItem value={"2"}>2/4 Tank</MenuItem>
+                  <MenuItem value={"3"}>3/4 Tank</MenuItem>
+                  <MenuItem value={"4"}>4/4 Tank</MenuItem>
+                </Select>
+              </Box>
             </Box>
             <Divider />
 
@@ -111,6 +207,91 @@ const Delivery = () => {
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>
             </Box>
           </Box>
+
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <MobileDatePicker
+              open={isOpen}
+              onClose={handleClose}
+              onOpen={handleOpen}
+              onChange={(newDate) => {
+                console.log(newDate);
+                setValue(newDate);
+              }}
+              inputFormat="MM-dd-yyyy"
+              views={["day"]}
+              slotProps={{
+                field: {
+                  sx: {
+                    display: "none",
+                  },
+                },
+                toolbar: {
+                  hidden: true,
+                },
+                dialog: {
+                  sx: {
+                    ".MuiPaper-root": {
+                      borderRadius: "20px !important",
+                      boxShadow:
+                        "0px 11.52456px 17.28684px 0px rgba(20, 20, 22, 0.24)",
+                    },
+                  },
+                },
+                calendarHeader: {
+                  sx: {
+                    ".MuiPickersCalendarHeader-root": {
+                      display: "flex",
+                      alignItems: "center",
+                      justifyItems: "center",
+                      paddingLeft: "16px !important",
+                      paddingRight: "25px !important",
+                    },
+                    ".MuiPickersArrowSwitcher-root": {
+                      display: "inline-flex",
+                    },
+                    ".MuiPickersCalendarHeader-label": {
+                      textAlign: "center !important",
+                      display: "flex",
+                      position: "absolute",
+                      paddingLeft: "80px",
+                    },
+                    ".MuiPickersArrowSwitcher-spacer": {
+                      width: "230px",
+                    },
+                  },
+                },
+                actionBar: {
+                  sx: {
+                    justifyContent: "space-around",
+                    ".MuiButtonBase-root:first-child": {
+                      display: "flex",
+                      width: "128px",
+                      padding: "13px 37px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "10px",
+                      borderRadius: "40px",
+                      background: "#CEEAF8",
+                      color: "white",
+                      marginBottom: "35px",
+                    },
+                    ".MuiButtonBase-root": {
+                      display: "flex",
+                      width: "128px",
+                      padding: "13px 37px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "10px",
+                      borderRadius: "40px",
+                      background: "#0B98DA",
+                      color: "white",
+                      marginBottom: "35px",
+                    },
+                  },
+                },
+              }}
+            />
+          </LocalizationProvider>
         </Box>
       </ThemeProvider>
     </>

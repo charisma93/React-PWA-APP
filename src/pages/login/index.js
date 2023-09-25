@@ -20,20 +20,28 @@ const theme = createTheme({
       fontWeight: 600,
       textAlign: "start",
     },
+    subtitle1 : {
+      color: '#656472',
+      fontFamily: "Poppins",
+      fontSize: "12px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal"
+    }
   },
 });
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
-    height: "30px",
-    borderRadius: 28,
+    height: "47px",
     position: "relative",
-    backgroundColor: "#F8F9FD",
-    border: "none",
     fontSize: 14,
     paddingLeft: "35px",
     paddingRight: "35px",
     color: "#536780",
+    borderRadius: "28px",
+    border: "1px solid rgba(221, 221, 221, 0.87)",
+    background: "#FFF",
     transition: theme.transitions.create([
       "border-color",
       "background-color",
@@ -49,21 +57,23 @@ const Login = () => {
       <ThemeProvider theme={theme}>
         <Box
           sx={{
-            // marginTop: "108px",
             display: "flex",
-            paddingLeft: "40px",
-            paddingRight: "40px",
+            paddingLeft: "27px",
+            paddingRight: "27px",
+            height: "100%",
+            justifyContent: "center",
+            alignItems: "center"
           }}
         >
           <Box
             sx={{
-              marginTop: "117px",
               bgcolor: "#fff",
               justifyContent: "center",
               fontFamily: "Poppins",
               width: "100%",
               height: "393px",
               borderRadius: "10px",
+              padding: "26px",
             }}
           >
             <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -79,18 +89,14 @@ const Login = () => {
               mt={1}
               fontSize={"20px"}
               fontStyle={"normal"}
+              fontFamily={"Poppins"}
               fontWeight={"600"}
               color={"#080808"}
-              marginLeft={"26px"}
             >
               Log In
             </Typography>
 
-            <Box
-              sx={{
-                padding: "0px 22px 0px 32px",
-              }}
-            >
+            <Box>
               <FormControl
                 variant="standard"
                 sx={{ width: "100%", marginTop: "15px" }}
@@ -105,12 +111,17 @@ const Login = () => {
                         position: "absolute",
                         left: 0,
                         padding: "10px",
-                        zIndex: 1,
+                        zIndex: 1
                       }}
                     >
                       <img src={profileIcon} alt="icon" />
                     </InputAdornment>
                   }
+                  inputProps={{
+                    sx: {
+                      backgroundColor: "white"
+                    }
+                  }}
                 />
               </FormControl>
 
@@ -154,13 +165,13 @@ const Login = () => {
                 fontStyle={"normal"}
                 fontWeight={"400"}
                 color={"#656472"}
-                marginLeft={"194px"}
+                sx={{ textAlign: "end" }}
               >
                 Forgot Password?
               </Typography>
             </Box>
 
-            <Box sx={{ padding: "26px" }}>
+            <Box sx={{ marginTop: '20px' }}>
               <MuiButton>
                 <Link to={"/yardDashboard"} style={{ color: "white" }}>
                   Login

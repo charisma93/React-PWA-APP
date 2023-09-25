@@ -13,10 +13,27 @@ const theme = createTheme({
       fontWeight: 600,
     },
     subtitle1: {
-      fontSize: 14,
-      color: "#8492A7",
       marginTop: "3px !important",
       textAlign: "start",
+      color: "#536780",
+      fontFamily: "Poppins",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.52px",
+    },
+  },
+  muiinput: {
+    "&::placeholder": {
+      color: "#8492A7",
+      textAlign: "right",
+      fontFamily: "Poppins",
+      fontSize: "12px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.48px",
     },
   },
 });
@@ -47,7 +64,7 @@ const ShipInfo = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "65px 32px 0px 32px"}}>
+        <Box sx={{ padding: "65px 32px 0px 32px" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -73,7 +90,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -95,7 +119,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -117,7 +148,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -139,7 +177,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -161,7 +206,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -175,7 +227,6 @@ const ShipInfo = () => {
                 Load Location{" "}
               </Typography>
               <Input
-                
                 style={{ width: "60%" }}
                 disableUnderline={true}
                 autoFocus={true}
@@ -184,7 +235,14 @@ const ShipInfo = () => {
                   sx: {
                     textAlign: "right",
                     "&::placeholder": {
+                      color: "#8492A7",
                       textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
                     },
                   },
                 }}
@@ -192,28 +250,29 @@ const ShipInfo = () => {
             </Box>
             <Divider />
           </Box>
+        </Box>
 
-          <Box
-            sx={{
-              padding: "64px 0px",
-              display: "flex",
-              justifyContent: "space-between",
-              bottom: "0",
-            }}
-          >
-            <MuiBackButton>
-              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-                {" "}
-                Back{" "}
-              </Link>
-            </MuiBackButton>
-            <MuiSaveButton>
-              <Link to={"/info/2"} style={{ color: "white" }}>
-                {" "}
-                Save{" "}
-              </Link>
-            </MuiSaveButton>
-          </Box>
+        <Box
+          sx={{
+            // padding: "64px 0px",
+            display: "flex",
+            justifyContent: "space-between",
+            bottom: "0",
+          }}
+          className="footer"
+        >
+          <MuiBackButton>
+            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+              {" "}
+              Back{" "}
+            </Link>
+          </MuiBackButton>
+          <MuiSaveButton>
+            <Link to={"/info/2"} style={{ color: "white" }}>
+              {" "}
+              Save{" "}
+            </Link>
+          </MuiSaveButton>
         </Box>
       </ThemeProvider>
     </>

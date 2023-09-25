@@ -5,17 +5,43 @@ import {
   Divider,
   Select,
   MenuItem,
-  Button,
+  IconButton,
   Checkbox,
+  Input,
 } from "@mui/material";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import { Icon } from "@iconify/react";
+import Webcam from "react-webcam";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CloseIcon from "@mui/icons-material/Close";
+import {
+  AddPhotoButton,
+  CaptureButton,
+  MuiButton,
+  FaileButton,
+} from "../../../components/Button";
 import "./pickup.scss";
-import { useNavigate } from "react-router-dom";
 import trashicon from "../../../assets/marks/trash.png";
-import cameraicon from "../../../assets/marks/Camera.png";
 
 const theme = createTheme({
+  components: {
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          color: "#080808",
+          textAlign: "right",
+          fontFamily: "Poppins",
+          fontSize: "13px",
+          fontStyle: "normal",
+          fontWeight: "500",
+          lineHeight: "normal",
+          letterSpacing: "-0.52px",
+        },
+      },
+    },
+  },
+
   typography: {
     title: {
       fontSize: 18,
@@ -39,33 +65,24 @@ const theme = createTheme({
   },
 });
 
-const AddPhotoButton = styled(Button)({
-  fontFamily: "Poppins",
-  borderRadius: "40px",
-  fontSize: "14px",
-  backgroundColor: "#E7FAF5",
-  border: "1px solid #09C792",
-  color: "#09C792",
-  height: "37px",
-  padding: "8px 37px",
-  "&:hover": {
-    backgroundColor: "#E7FAF5",
-    borderColor: "#09C792",
-  },
-});
-
-const PickUp = (props) => {  
-  let isViewPhoto = false;
-  if(localStorage.getItem('cam_set') === 1)
-    isViewPhoto = true;
-
-  const navigate = useNavigate();
+const PickUp = (props) => {
   const [checked, setChecked] = React.useState(true);
+  const webcamRef = React.useRef(null);
 
-  // const [ViewPhoto, setIsViewPhoto] = React.useState(false);
+  const [isViewPhoto, openCamera] = React.useState(false);
+  const [photoImg, setPhoto] = React.useState(null);
+
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
+
+  const add_photo = () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    console.log(imageSrc)
+    setPhoto("imageSrc");
+  };
+
+  const handleClose = () => {};
 
   return (
     <>
@@ -81,37 +98,91 @@ const PickUp = (props) => {
               textAlign: "center",
             }}
           >
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"40%"}>
                 Outgate
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"60%"}>
-                °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "60%" }}
+                placeholder="Type  °C"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#8492A7",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"40%"}>
                 Supply
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"60%"}>
-                °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "60%" }}
+                placeholder="Type  °C"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#8492A7",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"40%"}>
                 Return
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"60%"}>
-                °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "60%" }}
+                placeholder="Type  °C"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#8492A7",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                      letterSpacing: "-0.48px",
+                    },
+                  },
+                }}
+              />
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"50%"}>
                 Fuel Level
               </Typography>
@@ -140,7 +211,7 @@ const PickUp = (props) => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"50%"}>
                 Genset Type
               </Typography>
@@ -167,7 +238,7 @@ const PickUp = (props) => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"90%"}>
                 Does set Temp match K+N Order
                 <Checkbox
@@ -207,7 +278,7 @@ const PickUp = (props) => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"90%"}>
                 Sufficient fuel is provided
               </Typography>
@@ -234,7 +305,7 @@ const PickUp = (props) => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", alignItem: "center", height: "47px" }}>
               <Typography variant="subtitle1" mt={1} width={"90%"}>
                 Reefer isin god condition
               </Typography>
@@ -262,29 +333,22 @@ const PickUp = (props) => {
             <Divider />
 
             <Box sx={{ pt: "17px" }}>
-              {!isViewPhoto && (
-                <AddPhotoButton
-                  onClick={() => {
-                    isViewPhoto = true;  
-                    navigate('/webcamera');
-                  }}
-                >
+              {photoImg == null && (
+                <AddPhotoButton onClick={() => openCamera(true)}>
                   Click here to add Photo
                 </AddPhotoButton>
               )}
-              
-              {isViewPhoto && (
-                
+
+              {photoImg != null && (
                 <Box>
-                  <Box style={{ position: "relative" }}>
+                  <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <img
-                      src={localStorage.getItem('img_data')}
+                      src={photoImg}
                       alt="Captured"
                       style={{
-                        width: "100%",
-                        height: "183px",
+                        width: "50px",
+                        height: "46px",
                         borderRadius: 10,
-                        marginTop: "13px",
                       }}
                     />
 
@@ -293,9 +357,6 @@ const PickUp = (props) => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        position: "absolute",
-                        right: "11px",
-                        top: "24px",
                         backgroundColor: "#ffffff",
                         width: "36px",
                         height: "36px",
@@ -306,49 +367,113 @@ const PickUp = (props) => {
                         src={trashicon}
                         style={{ width: 15, height: 15 }}
                         onClick={() => {
-                          isViewPhoto = false;
-                          
-                          // setIsViewPhoto(true);
-                          localStorage.removeItem('img_data');
-                          localStorage.removeItem('cam_set');
+                          setPhoto(null)
                         }}
                         alt="camera"
                       />
                     </Box>
                   </Box>
 
-                  <Box
-                    style={{
-                      marginTop: "14px",
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography variant="subtitle1" mt={1} width={"90%"}>
-                      Retake a photo
-                    </Typography>
-
-                    <img
-                      src={cameraicon}
-                      onClick={() => {
-                      isViewPhoto = false;
-                    
-                      localStorage.removeItem('cam_set');
-                        navigate("/Webcamera");
-                      }}
-                      alt="camera"
-                    />
-                  </Box>
                 </Box>
               )}
             </Box>
           </Box>
         </Box>
+
+        {/* success */}
+        <Dialog onClose={handleClose} open={isViewPhoto}>
+          <Box
+            sx={{
+              textAlign: "center",
+              width: "326px",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "end",
+                padding: "23px 17px 17px",
+              }}
+              onClick={() => openCamera(false)}
+            >
+              <CloseIcon />
+            </Box>
+            <Box>
+              {photoImg != null ? (
+                <Box style={{ width: "100%", height: "276px" }}>
+                <img
+                style={{ width: "100%", height: "100%" }}
+                  src={photoImg}
+                  alt="mark"
+                />
+                </Box>
+              ) : (
+                <Webcam
+                  audio={false}
+                  screenshotFormat="image/webp"
+                  ref={webcamRef}
+                  style={{
+                    width: "100%",
+                    height: "276px",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              )}
+            </Box>
+            <Box
+              sx={{
+                padding: "25px 0px 35px",
+              }}
+            >
+              {photoImg == null ? (
+                <Box>
+                  <CaptureButton onClick={add_photo} />
+                  <IconButton
+                    sx={{
+                      background: "#F1F3FC",
+                      width: "40px",
+                      position: "absolute",
+                      right: "15%",
+                      bottom: "10%",
+                    }}
+                  >
+                    <Icon icon="ri:loop-right-fill" color="#0B98DA" />
+                  </IconButton>
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <FaileButton
+                    style={{
+                      width: "140px",
+                      height: "40px",
+                    }}
+                    onClick={() => setPhoto(null)}
+                  >
+                    Retake
+                  </FaileButton>
+                  <MuiButton
+                    style={{
+                      width: "140px",
+                      height: "40px",
+                    }}
+                    onClick={() => openCamera(false)}
+                  >
+                    Use Photo
+                  </MuiButton>
+                </Box>
+              )}
+            </Box>
+          </Box>
+        </Dialog>
       </ThemeProvider>
     </>
   );
 };
 
 export default PickUp;
-
-

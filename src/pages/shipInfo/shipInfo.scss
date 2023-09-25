@@ -1,3 +1,9 @@
 .text-field {
     text-align: right !important;
 }
+.footer {
+  width: -webkit-fill-available;
+  position: fixed;
+  bottom: 0;
+  padding: 32px;
+}

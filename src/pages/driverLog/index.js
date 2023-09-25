@@ -71,7 +71,6 @@ const Home = () => {
           </Box>
         </div>
 
-        <footer></footer>
       </ThemeProvider>
     </>
   );

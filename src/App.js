@@ -9,6 +9,7 @@ import Dashboard from "./pages/yardDashboard";
 import FinalLogCheck from "./pages/finalLogCheck";
 import YardCheck from "./pages/yardCheck";
 import YardGenSet from "./pages/yardGenset";
+import AddGenSet from "./pages/finalLogCheck/AddGenSet";
 import YardDelivery from "./pages/yardDelivery";
 import YardDashboard from "./pages/yardDashboard";
 import Login from "./pages/login";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/yardcheck" element={<YardCheck />} />
           <Route path="/yardDashboard" element={<YardDashboard />} />
           <Route path="/yardgenset" element={<YardGenSet />} />
+          <Route path="/addnewgen" element={<AddGenSet />} />
           <Route path="/yarddelivery" element={<YardDelivery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/Webcamera" element={<Webcamera />} />

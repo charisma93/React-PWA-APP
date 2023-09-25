@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import share from "../../assets/icons/share.svg";
 import menu from "../../assets/icons/menu.svg";
-import basketball from "../../assets/icons/basketball.svg";
+import container from "../../assets/icons/container.svg";
 import car from "../../assets/icons/car.svg";
 import location from "../../assets/icons/location.svg";
 
@@ -184,7 +184,7 @@ const Dashboard = () => {
             >
               <Box sx={{ display: "flex" }}>
                 <Box className="avatar">
-                  <img src={basketball} alt="basketball" />
+                  <img src={container} alt="container" />
                 </Box>
                 <Box sx={{ pl: "18px" }}>
                   <Typography variant="title">HLBU9605147</Typography>

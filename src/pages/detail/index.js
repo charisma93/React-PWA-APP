@@ -111,17 +111,15 @@ const Detail = () => {
               </Typography>
             </Box>
           </Box>
-
-          <Box
-            mt={3}
-          >
-            <MuiButton>
-              <Link to={"/info/1"} style={{ color: "white" }}>
-                Acknowledge Instructions & Continue
-              </Link>
-            </MuiButton>
-          </Box>
         </div>
+
+        <Box className="footer" >
+          <MuiButton>
+            <Link to={"/info/1"} style={{ color: "white" }}>
+              Acknowledge Instructions & Continue
+            </Link>
+          </MuiButton>
+        </Box>
       </ThemeProvider>
     </>
   );

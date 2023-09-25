@@ -23,10 +23,15 @@ const theme = createTheme({
       display: "flex",
     },
     subtitle1: {
-      fontFamily: "Poppins",
-      fontSize: 13,
       marginTop: "3px !important",
       textAlign: "start",
+      color: "#536780",
+      fontFamily: "Poppins",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.52px",
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -85,7 +90,7 @@ const Checks = () => {
           </Box>
         </header>
 
-        <Box sx={{ padding: "65px 32px 0px 32px"}}>
+        <Box sx={{ padding: "65px 32px 0px 32px" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -149,8 +154,17 @@ const Checks = () => {
                 Add Gen Sett
               </Typography>
             </Box>
+
             <PlusBtn>
-              <AddIcon />
+              <Link to={"/addnewgen"} style={{ color: "#0B98DA" }}>
+                <AddIcon
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    color: "#fff",
+                  }}
+                />
+              </Link>
             </PlusBtn>
           </Box>
 
@@ -176,21 +190,21 @@ const Checks = () => {
               <AddIcon />
             </PlusBtn>
           </Box>
+        </Box>
 
-          <div className="footer-final">
-            <MuiBackButton>
-              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-                {" "}
-                Back{" "}
-              </Link>
-            </MuiBackButton>
-            <MuiSaveButton>
-              <Link to={"/yardcheck"} style={{ color: "white" }}>
-                {" "}
-                Skip{" "}
-              </Link>
-            </MuiSaveButton>
-          </div>
+        <Box className="footer">
+          <MuiBackButton>
+            <Link to={"/yardDashboard"} style={{ color: "#0B98DA" }}>
+              {" "}
+              Back{" "}
+            </Link>
+          </MuiBackButton>
+          <MuiSaveButton>
+            <Link to={"/yardgenset"} style={{ color: "white" }}>
+              {" "}
+              Skip{" "}
+            </Link>
+          </MuiSaveButton>
         </Box>
       </ThemeProvider>
     </>

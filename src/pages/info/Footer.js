@@ -15,11 +15,12 @@ const Content = (props) => {
     <>
       {id !== "1" && id !== "6" ? (
         <Box
+          className="footer"
           sx={{
             padding: "64px 32px 30px",
             display: "flex",
             justifyContent: "space-between",
-            bottom: '0'
+            bottom: "0",
           }}
         >
           <MuiBackButton>
@@ -40,24 +41,21 @@ const Content = (props) => {
         </Box>
       ) : (
         <Box
+          className="footer"
           sx={{
             padding: "34px 32px 30px",
-            bottom: '0'
+            bottom: "0",
           }}
         >
-          <Box >
-            {id === "6" ? (
-              <MuiButton>
-                <Link to={"/login"} style={{ color: "white" }}>
-                  Click here to complete shipment
-                </Link>
-              </MuiButton>
-            ) : (
-              <MuiButton onClick={() => props.setOpen(true)}>
-                Continue
-              </MuiButton>
-            )}
-          </Box>
+          {id === "6" ? (
+            <MuiButton>
+              <Link to={"/login"} style={{ color: "white" }}>
+                Click here to complete shipment
+              </Link>
+            </MuiButton>
+          ) : (
+            <MuiButton onClick={() => props.setOpen(true)}>Continue</MuiButton>
+          )}
         </Box>
       )}
     </>

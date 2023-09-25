@@ -201,7 +201,7 @@ const YardGenSet = () => {
           </Box>
         </Box>
 
-        <div className="genset-footer">
+        <Box className="genset-footer">
           <MuiBackButton>
             <Link to={"/yardcheck"} style={{ color: "#0B98DA" }}>
               {" "}
@@ -214,7 +214,7 @@ const YardGenSet = () => {
               Skip{" "}
             </Link>
           </MuiSaveButton>
-        </div>
+        </Box>
       </ThemeProvider>
     </>
   );

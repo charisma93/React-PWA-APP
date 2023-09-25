@@ -6,16 +6,20 @@ import {
   Button,
   Checkbox,
   Input,
+  InputAdornment,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Calendar from "../../../assets/icons/calendar.svg";
+import { Icon } from "@iconify/react";
 import "./index.scss";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import moment from "moment";
-
 
 const theme = createTheme({
   typography: {
@@ -24,13 +28,19 @@ const theme = createTheme({
       fontSize: 16,
       fontWeight: 600,
       textAlign: "start",
+      display: "flex",
+      alignItems: "center",
     },
     subtitle1: {
+      color: "#536780",
       fontFamily: "Poppins",
-      fontSize: 13,
-      color: "#8492A7",
-      marginTop: "3px !important",
-      textAlign: "start",
+      fontSize: "13px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.52px",
+      display: "flex",
+      alignItems: "center",
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -38,6 +48,20 @@ const theme = createTheme({
       marginTop: "3px !important",
       textAlign: "start",
       paddingLeft: 5,
+      display: "flex",
+      alignItems: "center",
+    },
+    body2: {
+      color: "#8492A7",
+      fontFamily: "Poppins",
+      fontSize: "11px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.44px",
+      marginTop: "0px !important",
+      display: "flex",
+      alignItems: "center",
     },
   },
 });
@@ -61,7 +85,7 @@ const DeliveryDetail = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState(moment.now());
 
   return (
     <>
@@ -92,17 +116,31 @@ const DeliveryDetail = () => {
                 Date
               </Typography>
               <Typography variant="subtitle2" mt={1} width={"30%"}>
-                06 - 15 - 23
+                06/15/2023
               </Typography>
               <div className="divider-line" />
-              <Typography
-                variant="subtitle2"
-                mt={1}
-                width={"35%"}
-                color={"red"}
-              >
-                06 - 15 - 23
-              </Typography>
+              <Input
+                placeholder="( Print Name/Signature )"
+                disableUnderline={true}
+                autoFocus={true}
+                className="input-box"
+                value={moment(value).format("YYYY/MM/DD")}
+                sx={{
+                  textAlign: "right",
+                  fontFamily: "Poppins",
+                  fontSize: "13px",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  lineHeight: "normal",
+                  width: "29%",
+                  color: "red",
+                }}
+              />
+              <img
+                src={Calendar}
+                alt="calendar"
+                onClick={() => setIsOpen(true)}
+              />
             </Box>
             <Divider />
 
@@ -114,14 +152,33 @@ const DeliveryDetail = () => {
                 45 °C
               </Typography>
               <div className="divider-line" />
-              <Typography
-                variant="subtitle2"
-                mt={1}
-                width={"35%"}
-                color={"red"}
-              >
-                45 °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "37%" }}
+                placeholder="Type"
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    color: "#FF4A4A",
+                    "&::placeholder": {
+                      color: "#FF4A4A",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "13px",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "normal",
+                      letterSpacing: "0.52px",
+                    },
+                  },
+                }}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <Icon icon="ri:celsius-line" color="#8492A7" />
+                  </InputAdornment>
+                }
+              />
             </Box>
             <Divider />
 
@@ -133,14 +190,33 @@ const DeliveryDetail = () => {
                 45 °C
               </Typography>
               <div className="divider-line" />
-              <Typography
-                variant="subtitle2"
-                mt={1}
-                width={"35%"}
-                color={"red"}
-              >
-                45 °C
-              </Typography>
+              <Input
+                disableUnderline={true}
+                autoFocus={true}
+                style={{ width: "37%" }}
+                placeholder="Type"
+                inputProps={{
+                  sx: {
+                    color: "#FF4A4A",
+                    textAlign: "right",
+                    "&::placeholder": {
+                      color: "#FF4A4A",
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "13px",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "normal",
+                      letterSpacing: "0.52px",
+                    },
+                  },
+                }}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <Icon icon="ri:celsius-line" color="#8492A7" />
+                  </InputAdornment>
+                }
+              />
             </Box>
             <Divider />
 
@@ -152,14 +228,36 @@ const DeliveryDetail = () => {
                 1/4
               </Typography>
               <div className="divider-line" />
-              <Typography
-                variant="subtitle2"
-                mt={1}
-                width={"35%"}
-                color={"red"}
+              <Box
+                sx={{
+                  alignItems: "end",
+                  display: "flex",
+                  width: "37%",
+                  justifyContent: "end",
+                }}
               >
-                1/4
-              </Typography>
+                <Select
+                  variant="standard"
+                  IconComponent={ExpandMoreIcon}
+                  defaultValue={"3"}
+                  disableUnderline
+                  sx={{
+                    color: "#FF4A4A",
+                    ".MuiSvgIcon-root": {
+                      paddingRight: "0px !important",
+                    },
+                    fontWeight: "600",
+                    fontFamily: "Poppins",
+                  }}
+                >
+                  <MenuItem value={"1"} selected>
+                    1/4 Tank
+                  </MenuItem>
+                  <MenuItem value={"2"}>2/4 Tank</MenuItem>
+                  <MenuItem value={"3"}>3/4 Tank</MenuItem>
+                  <MenuItem value={"4"}>4/4 Tank</MenuItem>
+                </Select>
+              </Box>
             </Box>
             <Divider />
 
@@ -179,32 +277,73 @@ const DeliveryDetail = () => {
               </Typography>
             </Box>
 
-            <Box sx={{ display: "flex", p: "31px 0px 8px 0px" }}>
-              <Typography variant="subtitle1" mt={1}>
-                Receiver
-              </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                p: "31px 0px 8px 0px",
+                width: "100%",
+                alignItems: "center",
+              }}
+            >
+              <Box sx={{ width: "50%" }}>
+                <Typography variant="subtitle1" mt={1}>
+                  Receiver
+                </Typography>
+                <Typography variant="body2" mt={1}>
+                  Print Name/Signature
+                </Typography>
+              </Box>
               <Input
+                sx={{ width: "50%" }}
                 placeholder="( Print Name/Signature )"
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format('YYYY-MM-DD, h:mm:ss a')}
+                value={moment(value).format("YYYY-MM-DD")}
+                inputProps={{
+                  sx: {
+                    textAlign: "end",
+                    paddingRight: "5px",
+                  },
+                }}
               />
-              <img src={Calendar} alt="calendar" 
-                onClick={() => setIsOpen(true)}/>
+              <img
+                src={Calendar}
+                alt="calendar"
+                onClick={() => setIsOpen(true)}
+              />
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "8px 0px" }}>
-              <Typography variant="subtitle1" mt={1}>
-                Driver
-              </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                p: "8px 0px",
+                width: "100%",
+                alignItems: "center",
+              }}
+            >
+              <Box sx={{ width: "50%" }}>
+                <Typography variant="subtitle1" mt={1}>
+                  Driver
+                </Typography>
+                <Typography variant="body2" mt={1}>
+                  Print Name/Signature
+                </Typography>
+              </Box>
               <Input
+                sx={{ width: "50%" }}
                 placeholder="( Print Name/Signature )"
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format('YYYY-MM-DD, h:mm:ss a')}
+                value={moment(value).format("YYYY-MM-DD")}
+                inputProps={{
+                  sx: {
+                    textAlign: "end",
+                    paddingRight: "5px",
+                  },
+                }}
               />
               <img
                 src={Calendar}
@@ -215,20 +354,22 @@ const DeliveryDetail = () => {
             <Divider />
 
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
+              <MobileDatePicker
                 open={isOpen}
                 onClose={handleClose}
                 onOpen={handleOpen}
                 onChange={(newDate) => {
-                  console.log(newDate)
+                  console.log(newDate);
                   setValue(newDate);
                 }}
                 inputFormat="MM-dd-yyyy"
                 views={["day"]}
                 slotProps={{
-                  field: { sx: {
-                    display: 'none'
-                  } },
+                  field: {
+                    sx: {
+                      display: "none",
+                    },
+                  },
                   toolbar: {
                     hidden: true,
                   },
@@ -295,7 +436,7 @@ const DeliveryDetail = () => {
               />
             </LocalizationProvider>
 
-            <Box sx={{ pb: "35px", pt: "20px", textAlign: "center" }}>
+            <Box sx={{ pb: "15px", pt: "20px", textAlign: "center" }}>
               <AddPhotoButton>Click here to add Photo</AddPhotoButton>
             </Box>
           </Box>

@@ -12,9 +12,23 @@ import { Link } from "react-router-dom";
 import share from "../../assets/icons/share.svg";
 import "./checkingInfo.scss";
 
-
-
 const theme = createTheme({
+  components: {
+    MuiSelect: {
+      styleOverrides: {
+        select: {
+          color: "#080808",
+          textAlign: "right",
+          fontFamily: "Poppins",
+          fontSize: "13px",
+          fontStyle: "normal",
+          fontWeight: "500",
+          lineHeight: "normal",
+          letterSpacing: "-0.52px",
+        },
+      },
+    },
+  },
   typography: {
     title: {
       fontFamily: "Poppins",
@@ -192,43 +206,39 @@ const CheckingInfo = () => {
               </Box>
             </Box>
 
-            
-          </Box>
-
-          <Box>
-            
-            <Box sx={{ pb: "35px", textAlign: "center" }}>
-              <AddPhotoButton >Click here to add Photo</AddPhotoButton>
+            <Box>
+              <Box sx={{ pb: "35px", textAlign: "center" }}>
+                <AddPhotoButton>Click here to add Photo</AddPhotoButton>
+              </Box>
             </Box>
-            
           </Box>
+        </Box>
 
-          <Box
-            sx={{
-              margin: "62px 0px 30px",
-              display: "flex",
-              justifyContent: "space-between",
-              bottom: "0",
-            }}
-          >
-            <MuiBackButton>
-              <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
-                {" "}
-                Back{" "}
-              </Link>
-            </MuiBackButton>
-            <MuiSaveButton>
-              <Link to={"/info/4"} style={{ color: "white" }}>
-                {" "}
-                Save{" "}
-              </Link>
-            </MuiSaveButton>
-          </Box>
+        <Box
+          sx={{
+            // margin: "62px 0px 30px",
+            display: "flex",
+            justifyContent: "space-between",
+            bottom: "0",
+          }}
+          className="footer"
+        >
+          <MuiBackButton>
+            <Link to={"/info/1"} style={{ color: "#0B98DA" }}>
+              {" "}
+              Back{" "}
+            </Link>
+          </MuiBackButton>
+          <MuiSaveButton>
+            <Link to={"/info/4"} style={{ color: "white" }}>
+              {" "}
+              Save{" "}
+            </Link>
+          </MuiSaveButton>
         </Box>
       </ThemeProvider>
     </>
   );
 };
-
 
 export default CheckingInfo;

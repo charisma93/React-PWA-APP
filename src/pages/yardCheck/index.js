@@ -50,41 +50,46 @@ const Home = () => {
         </header>
 
         <div className="yard-check" onClick={() => navigate("/checkinginfo")}>
-          <Box
-            sx={{
-              bgcolor: "background.paper",
-              boxShadow:
-                "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
-              borderRadius: 2,
-              padding: "24px",
-              textAlign: "center",
-              marginTop: "65px",
-            }}
-          >
-            <Box>
-              <img src={KeyMark} alt="KeyMark" />
-            </Box>
-            <Box sx={{ marginTop: "24px" }}>
-              <Typography variant="title" marginTop={"24px"}>
-                Temperature and Genset fuel
-              </Typography>
-            </Box>
-            <Box sx={{ marginTop: "10px" }}>
-              <Typography variant="subtitle1" mt={1}>
-                levels must be recorded at least twice daily at no more than 8hr
-                increments. This page is only required if Reefer is held on
-                trucker’s yard.
-              </Typography>
+          <Box sx={{
+            display: "flex",
+            height: '100%',
+            justifyContent: "center",
+            alignItems: "center"
+          }}> 
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                boxShadow:
+                  "3px 3px 42px 0px rgb(0 0 0 / 6%), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12)",
+                borderRadius: 2,
+                padding: "24px",
+                textAlign: "center",
+              }}
+            >
+              <Box>
+                <img src={KeyMark} alt="KeyMark" />
+              </Box>
+              <Box sx={{ marginTop: "24px" }}>
+                <Typography variant="title" marginTop={"24px"}>
+                  Temperature and Genset fuel
+                </Typography>
+              </Box>
+              <Box sx={{ marginTop: "10px" }}>
+                <Typography variant="subtitle1" mt={1}>
+                  levels must be recorded at least twice daily at no more than
+                  8hr increments. This page is only required if Reefer is held
+                  on trucker’s yard.
+                </Typography>
+              </Box>
             </Box>
           </Box>
-
-          <div className="footer-yard">
+          <Box className="footer-yard">
             <MuiButton>
               <Link to={"/yardgenset"} style={{ color: "white" }}>
                 Continue
               </Link>{" "}
             </MuiButton>
-          </div>
+          </Box>
         </div>
       </ThemeProvider>
     </>
