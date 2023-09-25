@@ -78,8 +78,7 @@ const PickUp = (props) => {
 
   const add_photo = () => {
     const imageSrc = webcamRef.current.getScreenshot();
-    console.log(imageSrc)
-    setPhoto("imageSrc");
+    setPhoto(imageSrc);
   };
 
   const handleClose = () => {};
