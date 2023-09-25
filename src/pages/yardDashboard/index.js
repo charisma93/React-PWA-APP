@@ -66,8 +66,8 @@ const SelectInput = styled(InputBase)(({ theme }) => ({
     fontSize: 14,
     padding: "8px 20px",
     color: "#536780",
-    aligItem: "center",
-    display: "flex",
+    alignItems: "center !important",
+    display: "flex !important",
     transition: theme.transitions.create([
       "border-color",
       "background-color",
