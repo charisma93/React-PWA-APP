@@ -80,7 +80,7 @@ const Detail = () => {
 
           <Box
             sx={{
-              marginTop: "67px",
+              marginTop: "40px",
             }}
           >
             <Box

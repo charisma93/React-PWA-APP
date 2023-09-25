@@ -53,7 +53,7 @@ const theme = createTheme({
 });
 
 const CheckingInfo = () => {
-  const is_checking = false;
+  const is_checking = true;
 
   return (
     <>

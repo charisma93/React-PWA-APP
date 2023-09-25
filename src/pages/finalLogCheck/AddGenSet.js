@@ -214,6 +214,9 @@ const AddGenSet = () => {
                     boxShadow:
                       "0px 11.52456px 17.28684px 0px rgba(20, 20, 22, 0.24)",
                   },
+                  ".MuiDayCalendar-slideTransition": {
+                    minHeight: "200px",
+                  },
                 },
               },
               calendarHeader: {
@@ -222,8 +225,6 @@ const AddGenSet = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyItems: "center",
-                    paddingLeft: "16px !important",
-                    paddingRight: "25px !important",
                   },
                   ".MuiPickersArrowSwitcher-root": {
                     display: "inline-flex",
@@ -233,9 +234,38 @@ const AddGenSet = () => {
                     display: "flex",
                     position: "absolute",
                     paddingLeft: "80px",
+                    color: "#071830",
+                    fontFamily: "Poppins",
+                    fontSize: "12.965px",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "20.168px",
+                  },
+                  ".MuiPickersArrowSwitcher-button": {
+                    color: "#0B98DA",
                   },
                   ".MuiPickersArrowSwitcher-spacer": {
                     width: "230px",
+                  },
+                },
+              },
+              mobilePaper: {
+                sx: {
+                  ".MuiPickersDay-root": {
+                    color: "#071830",
+                    textAlign: "center",
+                    fontFamily: "Poppins",
+                    fontSize: "16px",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "30px",
+                  },
+                  ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
+                    background: "#E0F5FF !important",
+                  },
+                  ".Mui-selected": {
+                    background: "#E0F5FF !important",
+                    color: "#0B98DA !important",
                   },
                 },
               },
@@ -245,19 +275,19 @@ const AddGenSet = () => {
                   ".MuiButtonBase-root:first-child": {
                     display: "flex",
                     width: "128px",
-                    padding: "13px 37px",
+                    padding: "10px 30px",
                     justifyContent: "center",
                     alignItems: "center",
                     gap: "10px",
                     borderRadius: "40px",
                     background: "#CEEAF8",
-                    color: "white",
+                    color: "#0B98DA",
                     marginBottom: "35px",
                   },
                   ".MuiButtonBase-root": {
                     display: "flex",
                     width: "128px",
-                    padding: "13px 37px",
+                    padding: "10px 30px",
                     justifyContent: "center",
                     alignItems: "center",
                     gap: "10px",

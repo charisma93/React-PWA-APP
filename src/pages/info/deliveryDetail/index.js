@@ -100,18 +100,24 @@ const DeliveryDetail = () => {
               p: 2,
             }}
           >
-            <Box sx={{ p: "14px 0px", display: "flex" }}>
+            <Box sx={{ p: "7px 0px", display: "flex" }}>
               <Box variant="title" mt={1} width={"35%"} />
               <Typography variant="title" mt={1} width={"30%"}>
                 Arrival
               </Typography>
-              <Typography variant="title" mt={1} width={"35%"} color={"red"}>
+              <Typography
+                variant="title"
+                mt={1}
+                width={"35%"}
+                color={"red"}
+                sx={{ justifyContent: "end" }}
+              >
                 Departure
               </Typography>
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Date
               </Typography>
@@ -144,7 +150,7 @@ const DeliveryDetail = () => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Supply Temp
               </Typography>
@@ -182,7 +188,7 @@ const DeliveryDetail = () => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Return Temp
               </Typography>
@@ -220,7 +226,7 @@ const DeliveryDetail = () => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", p: "14px 0px" }}>
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Fuel Level
               </Typography>
@@ -261,7 +267,7 @@ const DeliveryDetail = () => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", paddingTop: "15px" }}>
+            <Box sx={{ display: "flex", paddingTop: "7px" }}>
               <Checkbox
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{
@@ -277,79 +283,119 @@ const DeliveryDetail = () => {
               </Typography>
             </Box>
 
-            <Box
-              sx={{
-                display: "flex",
-                p: "31px 0px 8px 0px",
-                width: "100%",
-                alignItems: "center",
-              }}
-            >
-              <Box sx={{ width: "50%" }}>
-                <Typography variant="subtitle1" mt={1}>
-                  Receiver
-                </Typography>
-                <Typography variant="body2" mt={1}>
-                  Print Name/Signature
-                </Typography>
+            <Box>
+              <Typography variant="subtitle1" mt={1}>
+                Receiver
+              </Typography>
+              <Box sx={{ display: "flex" }}>
+                <Box
+                  sx={{
+                    width: "50%",
+                    borderRight: "1px solid #EAEAEA",
+                    height: "20px",
+                  }}
+                >
+                  <Input
+                    disableUnderline={true}
+                    autoFocus={true}
+                    style={{ width: "60%" }}
+                    placeholder="Print Name/Signature"
+                    inputProps={{
+                      sx: {
+                        "&::placeholder": {
+                          color: "#8492A7",
+                          fontFamily: "Poppins",
+                          fontSize: "11px",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          lineHeight: "normal",
+                          letterSpacing: "-0.48px",
+                        },
+                      },
+                    }}
+                  />
+                </Box>
+                <Box sx={{ width: "50%" }}>
+                  <Box sx={{ display: "flex" }}>
+                    <Input
+                      placeholder="( Print Name/Signature )"
+                      disableUnderline={true}
+                      autoFocus={true}
+                      className="input-box"
+                      value={moment(value).format("YYYY-MM-DD")}
+                      inputProps={{
+                        sx: {
+                          textAlign: "end",
+                          paddingRight: "5px",
+                        },
+                      }}
+                    />
+                    <img
+                      src={Calendar}
+                      alt="calendar"
+                      onClick={() => setIsOpen(true)}
+                    />
+                  </Box>
+                </Box>
               </Box>
-              <Input
-                sx={{ width: "50%" }}
-                placeholder="( Print Name/Signature )"
-                disableUnderline={true}
-                autoFocus={true}
-                className="input-box"
-                value={moment(value).format("YYYY-MM-DD")}
-                inputProps={{
-                  sx: {
-                    textAlign: "end",
-                    paddingRight: "5px",
-                  },
-                }}
-              />
-              <img
-                src={Calendar}
-                alt="calendar"
-                onClick={() => setIsOpen(true)}
-              />
             </Box>
             <Divider />
 
-            <Box
-              sx={{
-                display: "flex",
-                p: "8px 0px",
-                width: "100%",
-                alignItems: "center",
-              }}
-            >
-              <Box sx={{ width: "50%" }}>
-                <Typography variant="subtitle1" mt={1}>
-                  Driver
-                </Typography>
-                <Typography variant="body2" mt={1}>
-                  Print Name/Signature
-                </Typography>
+            <Box>
+              <Typography variant="subtitle1" mt={1}>
+                Driver
+              </Typography>
+              <Box sx={{ display: "flex" }}>
+                <Box
+                  sx={{
+                    width: "50%",
+                    borderRight: "1px solid #EAEAEA",
+                    height: "20px",
+                  }}
+                >
+                  <Input
+                    disableUnderline={true}
+                    autoFocus={true}
+                    style={{ width: "60%" }}
+                    placeholder="Print Name/Signature"
+                    inputProps={{
+                      sx: {
+                        "&::placeholder": {
+                          color: "#8492A7",
+                          fontFamily: "Poppins",
+                          fontSize: "11px",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          lineHeight: "normal",
+                          letterSpacing: "-0.48px",
+                        },
+                      },
+                    }}
+                  />
+                </Box>
+                <Box sx={{ width: "50%" }}>
+                  <Box sx={{ display: "flex" }}>
+                    <Input
+                      placeholder="( Print Name/Signature )"
+                      disableUnderline={true}
+                      autoFocus={true}
+                      className="input-box"
+                      value={moment(value).format("YYYY-MM-DD")}
+                      inputProps={{
+                        sx: {
+                          textAlign: "end",
+                          paddingRight: "5px",
+                        },
+                      }}
+                    />
+                    <img
+                      src={Calendar}
+                      alt="calendar"
+                      onClick={() => setIsOpen(true)}
+                    />
+                  </Box>
+                </Box>
               </Box>
-              <Input
-                sx={{ width: "50%" }}
-                placeholder="( Print Name/Signature )"
-                disableUnderline={true}
-                autoFocus={true}
-                className="input-box"
-                value={moment(value).format("YYYY-MM-DD")}
-                inputProps={{
-                  sx: {
-                    textAlign: "end",
-                    paddingRight: "5px",
-                  },
-                }}
-              />
-              <img
-                src={Calendar}
-                alt="calendar"
-                onClick={() => setIsOpen(true)}
-              />
             </Box>
             <Divider />
 
@@ -380,6 +426,9 @@ const DeliveryDetail = () => {
                         boxShadow:
                           "0px 11.52456px 17.28684px 0px rgba(20, 20, 22, 0.24)",
                       },
+                      ".MuiDayCalendar-slideTransition": {
+                        minHeight: "200px"
+                      }
                     },
                   },
                   calendarHeader: {
@@ -397,11 +446,40 @@ const DeliveryDetail = () => {
                         display: "flex",
                         position: "absolute",
                         paddingLeft: "80px",
+                        color: "#071830",
+                        fontFamily: "Poppins",
+                        fontSize: "12.965px",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        lineHeight: "20.168px"
+                      },
+                      ".MuiPickersArrowSwitcher-button" : {
+                        color: "#0B98DA"
                       },
                       ".MuiPickersArrowSwitcher-spacer": {
                         width: "230px",
                       },
                     },
+                  },
+                  mobilePaper: {
+                    sx: {
+                      ".MuiPickersDay-root" : {
+                        color: "#071830",
+                        textAlign: "center",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        lineHeight: "30px"
+                      },
+                      ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
+                        background: "#E0F5FF !important"
+                      },
+                      ".Mui-selected": {
+                        background: "#E0F5FF !important",
+                        color: '#0B98DA !important'
+                      }
+                    }
                   },
                   actionBar: {
                     sx: {
@@ -409,19 +487,20 @@ const DeliveryDetail = () => {
                       ".MuiButtonBase-root:first-child": {
                         display: "flex",
                         width: "128px",
-                        padding: "13px 37px",
+                        padding: "10px 30px",
                         justifyContent: "center",
                         alignItems: "center",
                         gap: "10px",
                         borderRadius: "40px",
                         background: "#CEEAF8",
-                        color: "white",
+                        color: "#0B98DA",
                         marginBottom: "35px",
+
                       },
                       ".MuiButtonBase-root": {
                         display: "flex",
                         width: "128px",
-                        padding: "13px 37px",
+                        padding: "10px 30px",
                         justifyContent: "center",
                         alignItems: "center",
                         gap: "10px",

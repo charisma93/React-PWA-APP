@@ -33,7 +33,7 @@ const theme = createTheme({
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
-    height: "47px",
+    height: "40px",
     position: "relative",
     fontSize: 14,
     paddingLeft: "35px",

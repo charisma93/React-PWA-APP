@@ -64,8 +64,10 @@ const SelectInput = styled(InputBase)(({ theme }) => ({
     backgroundColor: "#FFFF",
     border: "1px solid #DDDDDD",
     fontSize: 14,
-    padding: "8px 16px",
+    padding: "8px 20px",
     color: "#536780",
+    aligItem: "center",
+    display: "flex",
     transition: theme.transitions.create([
       "border-color",
       "background-color",
@@ -134,7 +136,7 @@ const Dashboard = () => {
                 // disableUnderline
                 sx={{
                   "& .MuiSvgIcon-root": {
-                    right: "2px",
+                    right: "12px",
                   },
                 }}
               >

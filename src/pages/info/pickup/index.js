@@ -70,7 +70,7 @@ const PickUp = (props) => {
   const webcamRef = React.useRef(null);
 
   const [isViewPhoto, openCamera] = React.useState(false);
-  const [photoImg, setPhoto] = React.useState(null);
+  const [photoImg, setPhoto] = React.useState("null");
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -364,7 +364,7 @@ const PickUp = (props) => {
                     >
                       <img
                         src={trashicon}
-                        style={{ width: 15, height: 15 }}
+                        style={{ width: 14, height: 15 }}
                         onClick={() => {
                           setPhoto(null)
                         }}
