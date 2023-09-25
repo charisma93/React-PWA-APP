@@ -39,6 +39,7 @@ const AddPhotoButton = styled(Button)({
   border: "1px solid #09C792",
   color: "#09C792",
   padding: "8px 37px",
+  textTransform: "none",
   "&:hover": {
     backgroundColor: "#E7FAF5",
     borderColor: "#09C792",

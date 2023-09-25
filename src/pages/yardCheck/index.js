@@ -50,12 +50,14 @@ const Home = () => {
         </header>
 
         <div className="yard-check" onClick={() => navigate("/checkinginfo")}>
-          <Box sx={{
-            display: "flex",
-            height: '100%',
-            justifyContent: "center",
-            alignItems: "center"
-          }}> 
+          <Box
+            sx={{
+              display: "flex",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Box
               sx={{
                 bgcolor: "background.paper",
@@ -83,14 +85,14 @@ const Home = () => {
               </Box>
             </Box>
           </Box>
-          <Box className="footer-yard">
-            <MuiButton>
-              <Link to={"/yardgenset"} style={{ color: "white" }}>
-                Continue
-              </Link>{" "}
-            </MuiButton>
-          </Box>
         </div>
+        <Box className="footer-yardcheck">
+          <MuiButton>
+            <Link to={"/yardgenset"} style={{ color: "white" }}>
+              Continue
+            </Link>{" "}
+          </MuiButton>
+        </Box>
       </ThemeProvider>
     </>
   );

@@ -70,7 +70,7 @@ const PickUp = (props) => {
   const webcamRef = React.useRef(null);
 
   const [isViewPhoto, openCamera] = React.useState(false);
-  const [photoImg, setPhoto] = React.useState("null");
+  const [photoImg, setPhoto] = React.useState(null);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -78,6 +78,7 @@ const PickUp = (props) => {
 
   const add_photo = () => {
     const imageSrc = webcamRef.current.getScreenshot();
+    console.log(imageSrc)
     setPhoto(imageSrc);
   };
 
@@ -427,7 +428,7 @@ const PickUp = (props) => {
             >
               {photoImg == null ? (
                 <Box>
-                  <CaptureButton onClick={add_photo} />
+                  <CaptureButton onClick={() =>add_photo()}/>
                   <IconButton
                     sx={{
                       background: "#F1F3FC",

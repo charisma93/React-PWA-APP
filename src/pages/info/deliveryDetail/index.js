@@ -290,7 +290,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "50%",
+                    width: "63%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
@@ -315,19 +315,23 @@ const DeliveryDetail = () => {
                     }}
                   />
                 </Box>
-                <Box sx={{ width: "50%" }}>
+                <Box sx={{ width: "37%" }}>
                   <Box sx={{ display: "flex" }}>
                     <Input
                       placeholder="( Print Name/Signature )"
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY-MM-DD")}
-                      inputProps={{
-                        sx: {
-                          textAlign: "end",
-                          paddingRight: "5px",
-                        },
+                      value={moment(value).format("YYYY/MM/DD")}
+                      sx={{
+                        width: '100%',
+                        textAlign: "end",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: "500",
+                        lineHeight: "normal",
+                        color: "red",
                       }}
                     />
                     <img
@@ -348,7 +352,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "50%",
+                    width: "63%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
@@ -373,19 +377,23 @@ const DeliveryDetail = () => {
                     }}
                   />
                 </Box>
-                <Box sx={{ width: "50%" }}>
+                <Box sx={{ width: "37%" }}>
                   <Box sx={{ display: "flex" }}>
                     <Input
                       placeholder="( Print Name/Signature )"
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("YYYY-MM-DD")}
-                      inputProps={{
-                        sx: {
-                          textAlign: "end",
-                          paddingRight: "5px",
-                        },
+                      value={moment(value).format("YYYY/MM/DD")}
+                      sx={{
+                        width: '100%',
+                        textAlign: "right",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: "500",
+                        lineHeight: "normal",
+                        color: "red",
                       }}
                     />
                     <img
@@ -427,8 +435,8 @@ const DeliveryDetail = () => {
                           "0px 11.52456px 17.28684px 0px rgba(20, 20, 22, 0.24)",
                       },
                       ".MuiDayCalendar-slideTransition": {
-                        minHeight: "200px"
-                      }
+                        minHeight: "200px",
+                      },
                     },
                   },
                   calendarHeader: {
@@ -451,10 +459,10 @@ const DeliveryDetail = () => {
                         fontSize: "12.965px",
                         fontStyle: "normal",
                         fontWeight: 600,
-                        lineHeight: "20.168px"
+                        lineHeight: "20.168px",
                       },
-                      ".MuiPickersArrowSwitcher-button" : {
-                        color: "#0B98DA"
+                      ".MuiPickersArrowSwitcher-button": {
+                        color: "#0B98DA",
                       },
                       ".MuiPickersArrowSwitcher-spacer": {
                         width: "230px",
@@ -463,23 +471,23 @@ const DeliveryDetail = () => {
                   },
                   mobilePaper: {
                     sx: {
-                      ".MuiPickersDay-root" : {
+                      ".MuiPickersDay-root": {
                         color: "#071830",
                         textAlign: "center",
                         fontFamily: "Poppins",
                         fontSize: "16px",
                         fontStyle: "normal",
                         fontWeight: 600,
-                        lineHeight: "30px"
+                        lineHeight: "30px",
                       },
                       ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
-                        background: "#E0F5FF !important"
+                        background: "#E0F5FF !important",
                       },
                       ".Mui-selected": {
                         background: "#E0F5FF !important",
-                        color: '#0B98DA !important'
-                      }
-                    }
+                        color: "#0B98DA !important",
+                      },
+                    },
                   },
                   actionBar: {
                     sx: {
@@ -495,7 +503,6 @@ const DeliveryDetail = () => {
                         background: "#CEEAF8",
                         color: "#0B98DA",
                         marginBottom: "35px",
-
                       },
                       ".MuiButtonBase-root": {
                         display: "flex",

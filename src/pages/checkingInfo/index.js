@@ -207,7 +207,7 @@ const CheckingInfo = () => {
             </Box>
 
             <Box>
-              <Box sx={{ pb: "35px", textAlign: "center" }}>
+              <Box sx={{ pb: "25px", textAlign: "center" }}>
                 <AddPhotoButton>Click here to add Photo</AddPhotoButton>
               </Box>
             </Box>

@@ -92,15 +92,18 @@ const Delivery = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format("YYYY-MM-DD, h:mm:ss A")}
-                sx={{
-                  color: "#080808",
-                  textAlign: "right",
-                  fontFamily: "Poppins",
-                  fontSize: "13px",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  lineHeight: "normal",
+                value={moment(value).format("YYYY-MM-DD A")}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    color: "#080808",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "normal",
+                    paddingRight: '5px'
+                  },
                 }}
               />
               <img
