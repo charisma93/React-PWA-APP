@@ -43,12 +43,14 @@ const theme = createTheme({
     },
     subtitle2: {
       fontFamily: "Poppins",
-      fontSize: 13,
+      fontSize: "13px",
       marginTop: "3px !important",
-      textAlign: "start",
+      textAlign: "end",
       paddingLeft: 5,
       display: "flex",
       alignItems: "center",
+      justifyContent: "end",
+      paddingRight: "10px"
     },
     body2: {
       color: "#8492A7",
@@ -100,8 +102,8 @@ const DeliveryDetail = () => {
             }}
           >
             <Box sx={{ p: "7px 0px", display: "flex" }}>
-              <Box variant="title" mt={1} width={"35%"} />
-              <Typography variant="title" mt={1} width={"30%"}>
+              <Box mt={1} width={"35%"} />
+              <Typography variant="title" mt={1} width={"30%"} sx={{ justifyContent: 'end', paddingRight: '22px'}}>
                 Arrival
               </Typography>
               <Typography
@@ -129,7 +131,9 @@ const DeliveryDetail = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   lineHeight: "normal",
-                  width: "29%",
+                  display: "flex",
+                  justifyContent: "end",
+                  paddingRight: "10px"
                 }}
               >
                 06/15/2023
@@ -140,16 +144,18 @@ const DeliveryDetail = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format("DD/MM/YYYY")}
-                sx={{
-                  textAlign: "right",
-                  fontFamily: "Poppins",
-                  fontSize: "13px",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  lineHeight: "normal",
-                  width: "29%",
-                  color: "red",
+                value={moment(value).format("MM/DD/YYYY")}
+                style={{ width: "29%" }}
+                inputProps={{
+                  sx: {
+                    textAlign: "right",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "normal",
+                    color: "red",
+                  },
                 }}
               />
               <img
@@ -305,11 +311,17 @@ const DeliveryDetail = () => {
             </Box>
             <Divider />
 
-            <Box sx={{ display: "flex", paddingTop: "7px" }}>
+            <Box sx={{ display: "flex", paddingTop: "15px" }}>
               <Checkbox
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{
                   color: "#0B98DA",
+                  "&.MuiCheckbox-root": {
+                    padding: "0px 8px 15px 0px!important",
+                  },
+                  ".MuiButtonBase-root-MuiCheckbox-root": {
+                    padding: '0px !important'
+                  },
                   "&.Mui-checked": {
                     color: "#0B98DA",
                   },
@@ -341,9 +353,9 @@ const DeliveryDetail = () => {
                     inputProps={{
                       sx: {
                         "&::placeholder": {
-                          color: "#8492A7",
+                          color: "#030303",
                           fontFamily: "Poppins",
-                          fontSize: "11px",
+                          fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "normal",
@@ -360,16 +372,18 @@ const DeliveryDetail = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("DD/MM/YYYY")}
-                      sx={{
-                        width: "100%",
-                        textAlign: "end",
-                        fontFamily: "Poppins",
-                        fontSize: "13px",
-                        fontStyle: "normal",
-                        fontWeight: "500",
-                        lineHeight: "normal",
-                        color: "red",
+                      value={moment(value).format("MM/DD/YYYY")}
+                      inputProps={{
+                        sx: {
+                          textAlign: "end",
+                          width: "100%",
+                          fontFamily: "Poppins",
+                          fontSize: "13px",
+                          fontStyle: "normal",
+                          fontWeight: "500",
+                          lineHeight: "normal",
+                          color: "red",
+                        }
                       }}
                     />
                     <img
@@ -403,9 +417,9 @@ const DeliveryDetail = () => {
                     inputProps={{
                       sx: {
                         "&::placeholder": {
-                          color: "#8492A7",
+                          color: "#030303",
                           fontFamily: "Poppins",
-                          fontSize: "11px",
+                          fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "normal",
@@ -422,16 +436,18 @@ const DeliveryDetail = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("DD/MM/YYYY")}
-                      sx={{
-                        width: "100%",
-                        textAlign: "right",
-                        fontFamily: "Poppins",
-                        fontSize: "13px",
-                        fontStyle: "normal",
-                        fontWeight: "500",
-                        lineHeight: "normal",
-                        color: "red",
+                      value={moment(value).format("MM/DD/YYYY")}
+                      inputProps={{
+                        sx: {
+                          textAlign: "end",
+                          width: "100%",
+                          fontFamily: "Poppins",
+                          fontSize: "13px",
+                          fontStyle: "normal",
+                          fontWeight: "500",
+                          lineHeight: "normal",
+                          color: "red",
+                        }
                       }}
                     />
                     <img

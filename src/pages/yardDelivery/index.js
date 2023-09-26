@@ -129,6 +129,12 @@ const YardDelivery = () => {
               <Checkbox
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{
+                  "&.MuiCheckbox-root": {
+                    padding: "0px 8px 15px 0px!important",
+                  },
+                  ".MuiButtonBase-root-MuiCheckbox-root": {
+                    padding: '0px !important'
+                  },
                   color: "#0B98DA",
                   "&.Mui-checked": {
                     color: "#0B98DA",
@@ -156,14 +162,13 @@ const YardDelivery = () => {
                   <Input
                     disableUnderline={true}
                     autoFocus={true}
-                    style={{ width: "60%" }}
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
                         "&::placeholder": {
-                          color: "#8492A7",
+                          color: "#030303",
                           fontFamily: "Poppins",
-                          fontSize: "11px",
+                          fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "normal",
@@ -180,7 +185,7 @@ const YardDelivery = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("DD/MM/YYYY")}
+                      value={moment(value).format("MM/DD/YYYY")}
                       inputProps={{
                         sx: {
                           textAlign: "end",
@@ -216,14 +221,13 @@ const YardDelivery = () => {
                   <Input
                     disableUnderline={true}
                     autoFocus={true}
-                    style={{ width: "60%" }}
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
                         "&::placeholder": {
-                          color: "#8492A7",
+                          color: "#030303",
                           fontFamily: "Poppins",
-                          fontSize: "11px",
+                          fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 400,
                           lineHeight: "normal",
@@ -240,7 +244,7 @@ const YardDelivery = () => {
                       disableUnderline={true}
                       autoFocus={true}
                       className="input-box"
-                      value={moment(value).format("DD/MM/YYYY")}
+                      value={moment(value).format("MM/DD/YYYY")}
                       inputProps={{
                         sx: {
                           textAlign: "end",
