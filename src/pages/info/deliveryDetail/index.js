@@ -50,7 +50,7 @@ const theme = createTheme({
       display: "flex",
       alignItems: "center",
       justifyContent: "end",
-      paddingRight: "10px"
+      paddingRight: "10px",
     },
     body2: {
       color: "#8492A7",
@@ -103,7 +103,12 @@ const DeliveryDetail = () => {
           >
             <Box sx={{ p: "7px 0px", display: "flex" }}>
               <Box mt={1} width={"35%"} />
-              <Typography variant="title" mt={1} width={"18%"} sx={{ justifyContent: 'end', paddingRight: '22px'}}>
+              <Typography
+                variant="title"
+                mt={1}
+                width={"18%"}
+                sx={{ justifyContent: "end", paddingRight: "22px" }}
+              >
                 Arrival
               </Typography>
               <Typography
@@ -119,194 +124,234 @@ const DeliveryDetail = () => {
             <Divider />
 
             <Box sx={{ display: "flex", p: "7px 0px" }}>
-              <Typography variant="subtitle1" mt={1} width={"29%"}>
-                Date
-              </Typography>
-              <Typography
-                mt={1}
-                // width={"18%"}
+              <Box
                 sx={{
-                  fontFamily: "Poppins",
-                  fontSize: "13px",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  lineHeight: "normal",
                   display: "flex",
-                  justifyContent: "end",
-                  paddingRight: "10px"
+                  width: "58%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                 }}
               >
-                06/15/2023
-              </Typography>
-              <div className="divider-line" />
-              <Input
-                placeholder="( Print Name/Signature )"
-                disableUnderline={true}
-                autoFocus={true}
-                className="input-box"
-                value={moment(value).format("MM/DD/YYYY")}
-                style={{ width: "29%" }}
-                inputProps={{
-                  sx: {
-                    textAlign: "right",
+                <Typography variant="subtitle1" mt={1}>
+                  Date
+                </Typography>
+                <Typography
+                  mt={1}
+                  sx={{
                     fontFamily: "Poppins",
                     fontSize: "13px",
                     fontStyle: "normal",
                     fontWeight: "500",
                     lineHeight: "normal",
-                    color: "red",
-                  },
-                }}
-              />
-              <img
-                src={Calendar}
-                alt="calendar"
-                onClick={() => setIsOpen(true)}
-              />
-            </Box>
-            <Divider />
-
-            <Box sx={{ display: "flex", p: "7px 0px" }}>
-              <Typography variant="subtitle1" mt={1} width={"35%"}>
-                Supply Temp
-              </Typography>
-              <Typography variant="subtitle2" mt={1} width={"18%"}>
-                45 °C
-              </Typography>
-              <div className="divider-line" />
-              <Input
-                disableUnderline={true}
-                autoFocus={true}
-                style={{ width: "37%" }}
-                placeholder="Type"
-                inputProps={{
-                  sx: {
-                    textAlign: "right",
-                    color: "#FF4A4A",
-                    "&::placeholder": {
-                      color: "#FF4A4A",
-                      textAlign: "right",
-                      fontFamily: "Poppins",
-                      fontSize: "13px",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      letterSpacing: "0.52px",
-                    },
-                  },
-                }}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <span
-                      style={{
-                        color: "#536780",
-                        fontFamily: "Poppins",
-                        fontSize: "13px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "normal",
-                        letterSpacing: "-0.52px",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      °C
-                    </span>
-                  </InputAdornment>
-                }
-              />
-            </Box>
-            <Divider />
-
-            <Box sx={{ display: "flex", p: "7px 0px" }}>
-              <Typography variant="subtitle1" mt={1} width={"35%"}>
-                Return Temp
-              </Typography>
-              <Typography variant="subtitle2" mt={1} width={"18%"}>
-                45 °C
-              </Typography>
-              <div className="divider-line" />
-              <Input
-                disableUnderline={true}
-                autoFocus={true}
-                style={{ width: "37%" }}
-                placeholder="Type"
-                inputProps={{
-                  sx: {
-                    color: "#FF4A4A",
-                    textAlign: "right",
-                    "&::placeholder": {
-                      color: "#FF4A4A",
-                      textAlign: "right",
-                      fontFamily: "Poppins",
-                      fontSize: "13px",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "normal",
-                      letterSpacing: "0.52px",
-                    },
-                  },
-                }}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <span
-                      style={{
-                        color: "#536780",
-                        fontFamily: "Poppins",
-                        fontSize: "13px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "normal",
-                        letterSpacing: "-0.52px",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      °C
-                    </span>
-                  </InputAdornment>
-                }
-              />
-            </Box>
-            <Divider />
-
-            <Box sx={{ display: "flex", p: "7px 0px" }}>
-              <Typography variant="subtitle1" mt={1} width={"35%"}>
-                Fuel Level
-              </Typography>
-              <Typography variant="subtitle2" mt={1} width={"18%"}>
-                1/4
-              </Typography>
-              <div className="divider-line" />
-              <Box
-                sx={{
-                  alignItems: "end",
-                  display: "flex",
-                  width: "37%",
-                  justifyContent: "end",
-                }}
-              >
-                <Select
-                  variant="standard"
-                  IconComponent={ExpandMoreIcon}
-                  defaultValue={"3"}
-                  disableUnderline
-                  sx={{
-                    color: "#FF4A4A",
-                    ".MuiSvgIcon-root": {
-                      paddingRight: "0px !important",
-                    },
-                    fontWeight: "600",
-                    fontFamily: "Poppins",
+                    display: "flex",
+                    justifyContent: "end",
+                    paddingRight: "10px",
                   }}
                 >
-                  <MenuItem value={"1"} selected>
-                    1/4 Tank
-                  </MenuItem>
-                  <MenuItem value={"2"}>2/4 Tank</MenuItem>
-                  <MenuItem value={"3"}>3/4 Tank</MenuItem>
-                  <MenuItem value={"4"}>4/4 Tank</MenuItem>
-                </Select>
+                  06/15/2023
+                </Typography>
+              </Box>
+              <div className="divider-line" />
+              <Box sx={{ display: "flex", width: "42%" }}>
+                <Input
+                  placeholder="( Print Name/Signature )"
+                  disableUnderline={true}
+                  autoFocus={true}
+                  className="input-box"
+                  value={moment(value).format("MM/DD/YYYY")}
+                  inputProps={{
+                    sx: {
+                      textAlign: "right",
+                      fontFamily: "Poppins",
+                      fontSize: "13px",
+                      fontStyle: "normal",
+                      fontWeight: "500",
+                      lineHeight: "normal",
+                      color: "red",
+                    },
+                  }}
+                />
+                <img
+                  src={Calendar}
+                  alt="calendar"
+                  onClick={() => setIsOpen(true)}
+                />
+              </Box>
+            </Box>
+            <Divider />
+
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "58%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="subtitle1" mt={1}>
+                  Supply Temp
+                </Typography>
+                <Typography variant="subtitle2" mt={1}>
+                  45 °C
+                </Typography>
+              </Box>
+              <div className="divider-line" />
+              <Box sx={{ display: "flex", width: "42%" }}>
+                <Input
+                  disableUnderline={true}
+                  autoFocus={true}
+                  placeholder="Type"
+                  inputProps={{
+                    sx: {
+                      textAlign: "right",
+                      color: "#FF4A4A",
+                      "&::placeholder": {
+                        color: "#FF4A4A",
+                        textAlign: "right",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "normal",
+                        letterSpacing: "0.52px",
+                      },
+                    },
+                  }}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <span
+                        style={{
+                          color: "#536780",
+                          fontFamily: "Poppins",
+                          fontSize: "13px",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          lineHeight: "normal",
+                          letterSpacing: "-0.52px",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        °C
+                      </span>
+                    </InputAdornment>
+                  }
+                />
+              </Box>
+            </Box>
+            <Divider />
+
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "58%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="subtitle1" mt={1}>
+                  Return Temp
+                </Typography>
+                <Typography variant="subtitle2" mt={1}>
+                  45 °C
+                </Typography>
+              </Box>
+              <div className="divider-line" />
+              <Box sx={{ display: "flex", width: "42%" }}>
+                <Input
+                  disableUnderline={true}
+                  autoFocus={true}
+                  placeholder="Type"
+                  inputProps={{
+                    sx: {
+                      color: "#FF4A4A",
+                      textAlign: "right",
+                      "&::placeholder": {
+                        color: "#FF4A4A",
+                        textAlign: "right",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "normal",
+                        letterSpacing: "0.52px",
+                      },
+                    },
+                  }}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <span
+                        style={{
+                          color: "#536780",
+                          fontFamily: "Poppins",
+                          fontSize: "13px",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          lineHeight: "normal",
+                          letterSpacing: "-0.52px",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        °C
+                      </span>
+                    </InputAdornment>
+                  }
+                />
+              </Box>
+            </Box>
+            <Divider />
+
+            <Box sx={{ display: "flex", p: "7px 0px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  width: "58%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="subtitle1" mt={1} >
+                  Fuel Level
+                </Typography>
+                <Typography variant="subtitle2" mt={1}>
+                  1/4
+                </Typography>
+              </Box>
+              <div className="divider-line" />
+              <Box sx={{ display: "flex", width: "42%" }}>
+                <Box
+                  sx={{
+                    alignItems: "end",
+                    display: "flex",
+                    justifyContent: "end",
+                    width: "100%"
+                  }}
+                >
+                  <Select
+                    variant="standard"
+                    IconComponent={ExpandMoreIcon}
+                    defaultValue={"3"}
+                    disableUnderline
+                    sx={{
+                      color: "#FF4A4A",
+                      ".MuiSvgIcon-root": {
+                        paddingRight: "0px !important",
+                      },
+                      fontWeight: "600",
+                      fontFamily: "Poppins",
+                    }}
+                  >
+                    <MenuItem value={"1"} selected>
+                      1/4 Tank
+                    </MenuItem>
+                    <MenuItem value={"2"}>2/4 Tank</MenuItem>
+                    <MenuItem value={"3"}>3/4 Tank</MenuItem>
+                    <MenuItem value={"4"}>4/4 Tank</MenuItem>
+                  </Select>
+                </Box>
               </Box>
             </Box>
             <Divider />
@@ -320,7 +365,7 @@ const DeliveryDetail = () => {
                     padding: "0px 8px 15px 0px!important",
                   },
                   ".MuiButtonBase-root-MuiCheckbox-root": {
-                    padding: '0px !important'
+                    padding: "0px !important",
                   },
                   "&.Mui-checked": {
                     color: "#0B98DA",
@@ -340,7 +385,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "60%",
+                    width: "58%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
@@ -365,7 +410,7 @@ const DeliveryDetail = () => {
                     }}
                   />
                 </Box>
-                <Box sx={{ width: "37%" }}>
+                <Box sx={{ width: "42%" }}>
                   <Box sx={{ display: "flex" }}>
                     <Input
                       placeholder="( Print Name/Signature )"
@@ -383,7 +428,7 @@ const DeliveryDetail = () => {
                           fontWeight: "500",
                           lineHeight: "normal",
                           color: "red",
-                        }
+                        },
                       }}
                     />
                     <img
@@ -404,7 +449,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "60%",
+                    width: "58%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
@@ -429,7 +474,7 @@ const DeliveryDetail = () => {
                     }}
                   />
                 </Box>
-                <Box sx={{ width: "37%" }}>
+                <Box sx={{ width: "42%" }}>
                   <Box sx={{ display: "flex" }}>
                     <Input
                       placeholder="( Print Name/Signature )"
@@ -447,7 +492,7 @@ const DeliveryDetail = () => {
                           fontWeight: "500",
                           lineHeight: "normal",
                           color: "red",
-                        }
+                        },
                       }}
                     />
                     <img
