@@ -95,7 +95,7 @@ const AddGenSet = () => {
                   disableUnderline={true}
                   autoFocus={true}
                   className="input-box"
-                  value={moment(value).format("DD/MM/YYYY")}
+                  value={moment(value).format("MM/DD/YYYY")}
                   inputProps={{
                     sx: {
                       color: "#080808",
@@ -138,6 +138,9 @@ const AddGenSet = () => {
                   sx={{
                     ".MuiSvgIcon-root": {
                       paddingRight: "0px !important",
+                    },
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
                     },
                     fontWeight: "600",
                     fontFamily: "Poppins",

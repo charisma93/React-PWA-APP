@@ -191,7 +191,7 @@ const Content = (props) => {
                 PU date
               </Typography>
               <Typography variant="subtitle2" width={"50%"}>
-                19/04/2023
+                09/26/2023
               </Typography>
             </Box>
             <Divider />

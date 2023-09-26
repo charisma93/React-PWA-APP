@@ -89,6 +89,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -118,6 +125,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -147,6 +161,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -176,6 +197,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -205,6 +233,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -234,6 +269,13 @@ const ShipInfo = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#8492A7",
+                    fontFamily: "Poppins",
+                    fontSize: "12px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "normal",
+                    letterSpacing: "-0.48px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",

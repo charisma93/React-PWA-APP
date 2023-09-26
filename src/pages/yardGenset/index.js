@@ -59,7 +59,7 @@ const YardGenSet = () => {
             </Box>
           </Box>
         </header>
-        <Box sx={{ padding: "65px 32px 0px 32px"}}>
+        <Box sx={{ padding: "65px 32px 0px 32px" }}>
           <Box
             sx={{
               bgcolor: "background.paper",
@@ -86,7 +86,18 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
-                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
+                  inputProps={{
+                    sx: {
+                      minWidth: "50px !important",
+                    },
+                  }}
+                  sx={{
+                    fontWeight: "600",
+                    fontFamily: "Poppins",
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important",
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -116,7 +127,18 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
-                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
+                  inputProps={{
+                    sx: {
+                      minWidth: "50px !important",
+                    },
+                  }}
+                  sx={{
+                    fontWeight: "600",
+                    fontFamily: "Poppins",
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important",
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -146,7 +168,15 @@ const YardGenSet = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"3"}
                   disableUnderline
-                  sx={{ fontWeight: '600', fontFamily: 'Poppins' }}
+                  inputProps={{
+                    sx: {
+                      minWidth: "70px !important",
+                    },
+                  }}
+                  sx={{
+                    fontWeight: "600",
+                    fontFamily: "Poppins",
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     1/4 Tank

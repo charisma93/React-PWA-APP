@@ -27,11 +27,17 @@ const theme = createTheme({
       fontSize: 12,
       color: "#8492A7",
       textAlign: "start",
+      fontFamily: "Poppins",
     },
     subtitle2: {
       fontSize: 10,
-      color: "#8492A7",
       textAlign: "start",
+      color: "#536780",
+      fontFamily: "Poppins",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "normal",
+      letterSpacing: "-0.2px"
     },
   },
 });
@@ -136,6 +142,9 @@ const Dashboard = () => {
                 sx={{
                   "& .MuiSvgIcon-root": {
                     right: "12px",
+                  },
+                  "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                    paddingRight: "26px !important"
                   },
                 }}
               >

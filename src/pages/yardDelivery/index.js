@@ -21,6 +21,8 @@ const theme = createTheme({
       fontFamily: "Poppins",
       fontSize: 16,
       textAlign: "start",
+      fontWeight: 500,
+
     },
     subtitle1: {
       fontFamily: "Poppins",
@@ -165,6 +167,13 @@ const YardDelivery = () => {
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.48px",
+                        paddingRight: '5px',
                         "&::placeholder": {
                           color: "#030303",
                           fontFamily: "Poppins",
@@ -224,6 +233,13 @@ const YardDelivery = () => {
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.48px",
+                        paddingRight: '5px',
                         "&::placeholder": {
                           color: "#030303",
                           fontFamily: "Poppins",

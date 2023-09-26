@@ -168,6 +168,7 @@ const DeliveryDetail = () => {
                       fontWeight: "500",
                       lineHeight: "normal",
                       color: "red",
+                      paddingRight: "5px",
                     },
                   }}
                 />
@@ -206,6 +207,13 @@ const DeliveryDetail = () => {
                     sx: {
                       textAlign: "right",
                       color: "#FF4A4A",
+                      fontFamily: "Poppins",
+                      fontSize: "13px",
+                      fontStyle: "normal",
+                      fontWeight: "500",
+                      lineHeight: "normal",
+                      letterSpacing: "0.52px",
+                      paddingRight: "5px",
                       "&::placeholder": {
                         color: "#FF4A4A",
                         textAlign: "right",
@@ -266,8 +274,15 @@ const DeliveryDetail = () => {
                   placeholder="Type"
                   inputProps={{
                     sx: {
-                      color: "#FF4A4A",
                       textAlign: "right",
+                      color: "#FF4A4A",
+                      fontFamily: "Poppins",
+                      fontSize: "13px",
+                      fontStyle: "normal",
+                      fontWeight: "500",
+                      lineHeight: "normal",
+                      letterSpacing: "0.52px",
+                      paddingRight: "5px",
                       "&::placeholder": {
                         color: "#FF4A4A",
                         textAlign: "right",
@@ -313,7 +328,7 @@ const DeliveryDetail = () => {
                   alignItems: "center",
                 }}
               >
-                <Typography variant="subtitle1" mt={1} >
+                <Typography variant="subtitle1" mt={1}>
                   Fuel Level
                 </Typography>
                 <Typography variant="subtitle2" mt={1}>
@@ -327,7 +342,7 @@ const DeliveryDetail = () => {
                     alignItems: "end",
                     display: "flex",
                     justifyContent: "end",
-                    width: "100%"
+                    width: "100%",
                   }}
                 >
                   <Select
@@ -339,6 +354,9 @@ const DeliveryDetail = () => {
                       color: "#FF4A4A",
                       ".MuiSvgIcon-root": {
                         paddingRight: "0px !important",
+                      },
+                      "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                        paddingRight: "26px !important"
                       },
                       fontWeight: "600",
                       fontFamily: "Poppins",
@@ -393,10 +411,17 @@ const DeliveryDetail = () => {
                   <Input
                     disableUnderline={true}
                     autoFocus={true}
-                    style={{ width: "60%" }}
+                    style={{ width: "100%" }}
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.48px",
+                        paddingRight: '5px',
                         "&::placeholder": {
                           color: "#030303",
                           fontFamily: "Poppins",
@@ -428,6 +453,7 @@ const DeliveryDetail = () => {
                           fontWeight: "500",
                           lineHeight: "normal",
                           color: "red",
+                          paddingRight: "5px",
                         },
                       }}
                     />
@@ -457,10 +483,17 @@ const DeliveryDetail = () => {
                   <Input
                     disableUnderline={true}
                     autoFocus={true}
-                    style={{ width: "60%" }}
+                    style={{ width: "100%" }}
                     placeholder="Print Name/Signature"
                     inputProps={{
                       sx: {
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.48px",
+                        paddingRight: '5px',
                         "&::placeholder": {
                           color: "#030303",
                           fontFamily: "Poppins",
@@ -492,6 +525,7 @@ const DeliveryDetail = () => {
                           fontWeight: "500",
                           lineHeight: "normal",
                           color: "red",
+                          paddingRight: "5px",
                         },
                       }}
                     />

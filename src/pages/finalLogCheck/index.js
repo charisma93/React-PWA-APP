@@ -75,17 +75,27 @@ const Checks = () => {
               <Typography variant="subtitle1">
                 Is the Container Plugged in
               </Typography>
-              <Select
-                variant="standard"
-                IconComponent={ExpandMoreIcon}
-                defaultValue={"1"}
-                disableUnderline
-              >
-                <MenuItem value={"1"} selected>
-                  Yes
-                </MenuItem>
-                <MenuItem value={"2"}>No</MenuItem>
-              </Select>
+              <Box>
+                <Select
+                  variant="standard"
+                  IconComponent={ExpandMoreIcon}
+                  defaultValue={"1"}
+                  disableUnderline
+                  inputProps={{
+                    sx: {
+                      minWidth: "35px !important",
+                      "&.MuiSvgIcon-root-MuiSelect-icon": {
+                        paddingRight: "0px !important",
+                      },
+                    },
+                  }}
+                >
+                  <MenuItem value={"1"} selected>
+                    Yes
+                  </MenuItem>
+                  <MenuItem value={"2"}>No</MenuItem>
+                </Select>
+              </Box>
             </Box>
           </Box>
         </header>

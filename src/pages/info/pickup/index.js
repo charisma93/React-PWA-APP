@@ -55,7 +55,7 @@ const theme = createTheme({
       textAlign: "start",
       letterSpacing: 0,
       display: "flex",
-      alignItems: "center"
+      alignItems: "center",
     },
     subtitle2: {
       fontFamily: "Poppins",
@@ -80,7 +80,7 @@ const PickUp = (props) => {
 
   const add_photo = () => {
     const imageSrc = webcamRef.current.getScreenshot();
-    console.log(imageSrc)
+    console.log(imageSrc);
     setPhoto(imageSrc);
   };
 
@@ -112,6 +112,13 @@ const PickUp = (props) => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
+                    color: "#080808",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "normal",
+                    letterSpacing: "-0.52px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -139,7 +146,14 @@ const PickUp = (props) => {
                 placeholder="Type  °C"
                 inputProps={{
                   sx: {
+                    color: "#080808",
                     textAlign: "right",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "normal",
+                    letterSpacing: "-0.52px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -167,7 +181,14 @@ const PickUp = (props) => {
                 placeholder="Type  °C"
                 inputProps={{
                   sx: {
+                    color: "#080808",
                     textAlign: "right",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    lineHeight: "normal",
+                    letterSpacing: "-0.52px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -201,6 +222,11 @@ const PickUp = (props) => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"3"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     1/4 Tank
@@ -230,6 +256,11 @@ const PickUp = (props) => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     Genset Clip
@@ -270,6 +301,11 @@ const PickUp = (props) => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     Yes
@@ -297,6 +333,11 @@ const PickUp = (props) => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     Yes
@@ -324,6 +365,11 @@ const PickUp = (props) => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"1"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     Yes
@@ -343,7 +389,9 @@ const PickUp = (props) => {
 
               {photoImg != null && (
                 <Box>
-                  <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <Box
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
                     <img
                       src={photoImg}
                       alt="Captured"
@@ -369,13 +417,12 @@ const PickUp = (props) => {
                         src={trashicon}
                         style={{ width: 14, height: 15 }}
                         onClick={() => {
-                          setPhoto(null)
+                          setPhoto(null);
                         }}
                         alt="camera"
                       />
                     </Box>
                   </Box>
-
                 </Box>
               )}
             </Box>
@@ -403,11 +450,11 @@ const PickUp = (props) => {
             <Box>
               {photoImg != null ? (
                 <Box style={{ width: "100%", height: "276px" }}>
-                <img
-                style={{ width: "100%", height: "100%" }}
-                  src={photoImg}
-                  alt="mark"
-                />
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={photoImg}
+                    alt="mark"
+                  />
                 </Box>
               ) : (
                 <Webcam
@@ -430,7 +477,7 @@ const PickUp = (props) => {
             >
               {photoImg == null ? (
                 <Box>
-                  <CaptureButton onClick={() =>add_photo()}/>
+                  <CaptureButton onClick={() => add_photo()} />
                   <IconButton
                     sx={{
                       background: "#F1F3FC",

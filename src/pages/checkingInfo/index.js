@@ -123,6 +123,11 @@ const CheckingInfo = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -152,6 +157,11 @@ const CheckingInfo = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"2"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     55 °C
@@ -181,6 +191,11 @@ const CheckingInfo = () => {
                   IconComponent={ExpandMoreIcon}
                   defaultValue={"3"}
                   disableUnderline
+                  sx={{
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
+                    },
+                  }}
                 >
                   <MenuItem value={"1"} selected>
                     1/4 Tank

@@ -123,7 +123,14 @@ const Delivery = () => {
                 placeholder="Type  °C"
                 inputProps={{
                   sx: {
+                    color: "#080808",
                     textAlign: "right",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "600",
+                    lineHeight: "normal",
+                    letterSpacing: "-0.52px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -151,7 +158,14 @@ const Delivery = () => {
                 placeholder="Type  °C"
                 inputProps={{
                   sx: {
+                    color: "#080808",
                     textAlign: "right",
+                    fontFamily: "Poppins",
+                    fontSize: "13px",
+                    fontStyle: "normal",
+                    fontWeight: "600",
+                    lineHeight: "normal",
+                    letterSpacing: "-0.52px",
                     "&::placeholder": {
                       color: "#8492A7",
                       textAlign: "right",
@@ -188,6 +202,9 @@ const Delivery = () => {
                   sx={{
                     ".MuiSvgIcon-root": {
                       paddingRight: "0px !important",
+                    },
+                    "&.MuiSelect-select-MuiInputBase-input-MuiInput-input": {
+                      paddingRight: "26px !important"
                     },
                     fontWeight: "600",
                     fontFamily: "Poppins",
