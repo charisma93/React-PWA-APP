@@ -91,7 +91,7 @@ const Delivery = () => {
                 disableUnderline={true}
                 autoFocus={true}
                 className="input-box"
-                value={moment(value).format("DD/MM/YYYY")}
+                value={moment(value).format("MM/DD/YYYY")}
                 inputProps={{
                   sx: {
                     textAlign: "right",
