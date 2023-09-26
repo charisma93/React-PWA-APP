@@ -89,7 +89,7 @@ const YardDelivery = () => {
               <Typography variant="subtitle1" mt={1} width={"70%"}>
                 Date
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"70%"} sx={{ color: 'red' }}>
+              <Typography variant="subtitle2" mt={1} width={"70%"}>
                 06/15/2023
               </Typography>
             </Box>
@@ -185,9 +185,8 @@ const YardDelivery = () => {
                         sx: {
                           textAlign: "end",
                           paddingRight: "5px",
-                          color: "red",
                           fontSize: "14px",
-                          fontWeight: "bold"
+                          fontWeight: "bold",
                         },
                       }}
                     />
@@ -246,9 +245,8 @@ const YardDelivery = () => {
                         sx: {
                           textAlign: "end",
                           paddingRight: "5px",
-                          color: "red",
                           fontSize: "14px",
-                          fontWeight: "bold"
+                          fontWeight: "bold",
                         },
                       }}
                     />
@@ -275,10 +273,11 @@ const YardDelivery = () => {
             onClose={handleClose}
             onOpen={handleOpen}
             onChange={(newDate) => {
-              console.log(newDate);
               setValue(newDate);
             }}
-            inputFormat="MM-dd-yyyy"
+            disableHighlightToday="false"
+            inputFormat="MM/dd/yyyy"
+            dayOfWeekFormatter={(day) => day.toUpperCase()}
             views={["day"]}
             slotProps={{
               field: {
@@ -337,17 +336,18 @@ const YardDelivery = () => {
                     color: "#071830",
                     textAlign: "center",
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "13px",
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "30px",
                   },
                   ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
-                    background: "#E0F5FF !important",
+                    background: "#0B98DA !important",
+                    border: "none !important",
                   },
                   ".Mui-selected": {
-                    background: "#E0F5FF !important",
-                    color: "#0B98DA !important",
+                    background: "#0B98DA !important",
+                    color: "white !important",
                   },
                 },
               },

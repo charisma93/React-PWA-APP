@@ -56,7 +56,6 @@ const AddPhotoButton = styled(Button)({
     borderColor: "#09C792",
   },
 });
-
 const Delivery = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const handleOpen = () => setIsOpen(true);
@@ -96,13 +95,12 @@ const Delivery = () => {
                 inputProps={{
                   sx: {
                     textAlign: "right",
-                    color: "red",
                     fontFamily: "Poppins",
                     fontSize: "13px",
                     fontStyle: "normal",
                     fontWeight: "500",
                     lineHeight: "normal",
-                    paddingRight: '5px'
+                    paddingRight: "5px",
                   },
                 }}
               />
@@ -217,10 +215,11 @@ const Delivery = () => {
               onClose={handleClose}
               onOpen={handleOpen}
               onChange={(newDate) => {
-                console.log(newDate);
                 setValue(newDate);
               }}
-              inputFormat="MM-dd-yyyy"
+              disableHighlightToday="false"
+              inputFormat="MM/dd/yyyy"
+              dayOfWeekFormatter={(day) => day.toUpperCase()}
               views={["day"]}
               slotProps={{
                 field: {
@@ -279,17 +278,18 @@ const Delivery = () => {
                       color: "#071830",
                       textAlign: "center",
                       fontFamily: "Poppins",
-                      fontSize: "16px",
+                      fontSize: "13px",
                       fontStyle: "normal",
                       fontWeight: 600,
                       lineHeight: "30px",
                     },
                     ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
-                      background: "#E0F5FF !important",
+                      background: "#0B98DA !important",
+                      border: "none !important",
                     },
                     ".Mui-selected": {
-                      background: "#E0F5FF !important",
-                      color: "#0B98DA !important",
+                      background: "#0B98DA !important",
+                      color: "white !important",
                     },
                   },
                 },

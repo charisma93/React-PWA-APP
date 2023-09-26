@@ -13,7 +13,6 @@ import {
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Calendar from "../../../assets/icons/calendar.svg";
-import { Icon } from "@iconify/react";
 import "./index.scss";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -121,7 +120,18 @@ const DeliveryDetail = () => {
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Date
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"30%"} sx={{ color: 'red' }}>
+              <Typography
+                mt={1}
+                width={"30%"}
+                sx={{
+                  fontFamily: "Poppins",
+                  fontSize: "13px",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  lineHeight: "normal",
+                  width: "29%",
+                }}
+              >
                 06/15/2023
               </Typography>
               <div className="divider-line" />
@@ -181,7 +191,21 @@ const DeliveryDetail = () => {
                 }}
                 endAdornment={
                   <InputAdornment position="end">
-                    <Icon icon="ri:celsius-line" color="#8492A7" />
+                    <span
+                      style={{
+                        color: "#536780",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.52px",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      °C
+                    </span>
                   </InputAdornment>
                 }
               />
@@ -219,7 +243,21 @@ const DeliveryDetail = () => {
                 }}
                 endAdornment={
                   <InputAdornment position="end">
-                    <Icon icon="ri:celsius-line" color="#8492A7" />
+                    <span
+                      style={{
+                        color: "#536780",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                        letterSpacing: "-0.52px",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      °C
+                    </span>
                   </InputAdornment>
                 }
               />
@@ -324,7 +362,7 @@ const DeliveryDetail = () => {
                       className="input-box"
                       value={moment(value).format("DD/MM/YYYY")}
                       sx={{
-                        width: '100%',
+                        width: "100%",
                         textAlign: "end",
                         fontFamily: "Poppins",
                         fontSize: "13px",
@@ -386,7 +424,7 @@ const DeliveryDetail = () => {
                       className="input-box"
                       value={moment(value).format("DD/MM/YYYY")}
                       sx={{
-                        width: '100%',
+                        width: "100%",
                         textAlign: "right",
                         fontFamily: "Poppins",
                         fontSize: "13px",
@@ -413,10 +451,11 @@ const DeliveryDetail = () => {
                 onClose={handleClose}
                 onOpen={handleOpen}
                 onChange={(newDate) => {
-                  console.log(newDate);
                   setValue(newDate);
                 }}
-                inputFormat="MM-dd-yyyy"
+                disableHighlightToday="false"
+                inputFormat="MM/dd/yyyy"
+                dayOfWeekFormatter={(day) => day.toUpperCase()}
                 views={["day"]}
                 slotProps={{
                   field: {
@@ -475,17 +514,18 @@ const DeliveryDetail = () => {
                         color: "#071830",
                         textAlign: "center",
                         fontFamily: "Poppins",
-                        fontSize: "16px",
+                        fontSize: "13px",
                         fontStyle: "normal",
                         fontWeight: 600,
                         lineHeight: "30px",
                       },
                       ".MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
-                        background: "#E0F5FF !important",
+                        background: "#0B98DA !important",
+                        border: "none !important",
                       },
                       ".Mui-selected": {
-                        background: "#E0F5FF !important",
-                        color: "#0B98DA !important",
+                        background: "#0B98DA !important",
+                        color: "white !important",
                       },
                     },
                   },
