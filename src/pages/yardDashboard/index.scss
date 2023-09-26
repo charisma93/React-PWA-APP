@@ -15,9 +15,14 @@
 
 .card {
   .detail_txt {
-    font-size: 9px;
     color: #8492A7;
     text-align: start;
+    font-family: "Poppins";
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.18px;
   }
   &:hover {
     border: 1px solid #0B98DA ;

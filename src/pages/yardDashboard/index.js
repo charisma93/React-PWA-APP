@@ -146,26 +146,6 @@ const Dashboard = () => {
                 <MenuItem value={"3"}>35 °C</MenuItem>
                 <MenuItem value={"4"}>25 °C</MenuItem>
               </Select>
-
-              {/* <Select
-                variant="standard"
-                IconComponent={ExpandMoreIcon}
-                defaultValue={"1"}
-                input={<SelectInput />}
-                disableUnderline
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    right: "8px",
-                  },
-                }}
-              >
-                <MenuItem value={"1"} selected>
-                  Container
-                </MenuItem>
-                <MenuItem value={"2"}>45 °C </MenuItem>
-                <MenuItem value={"3"}>35 °C</MenuItem>
-                <MenuItem value={"4"}>25 °C</MenuItem>
-              </Select> */}
             </Box>
           </Box>
         </header>

@@ -103,7 +103,7 @@ const DeliveryDetail = () => {
           >
             <Box sx={{ p: "7px 0px", display: "flex" }}>
               <Box mt={1} width={"35%"} />
-              <Typography variant="title" mt={1} width={"30%"} sx={{ justifyContent: 'end', paddingRight: '22px'}}>
+              <Typography variant="title" mt={1} width={"18%"} sx={{ justifyContent: 'end', paddingRight: '22px'}}>
                 Arrival
               </Typography>
               <Typography
@@ -119,12 +119,12 @@ const DeliveryDetail = () => {
             <Divider />
 
             <Box sx={{ display: "flex", p: "7px 0px" }}>
-              <Typography variant="subtitle1" mt={1} width={"35%"}>
+              <Typography variant="subtitle1" mt={1} width={"29%"}>
                 Date
               </Typography>
               <Typography
                 mt={1}
-                width={"30%"}
+                // width={"18%"}
                 sx={{
                   fontFamily: "Poppins",
                   fontSize: "13px",
@@ -170,7 +170,7 @@ const DeliveryDetail = () => {
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Supply Temp
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"30%"}>
+              <Typography variant="subtitle2" mt={1} width={"18%"}>
                 45 °C
               </Typography>
               <div className="divider-line" />
@@ -222,7 +222,7 @@ const DeliveryDetail = () => {
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Return Temp
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"30%"}>
+              <Typography variant="subtitle2" mt={1} width={"18%"}>
                 45 °C
               </Typography>
               <div className="divider-line" />
@@ -274,7 +274,7 @@ const DeliveryDetail = () => {
               <Typography variant="subtitle1" mt={1} width={"35%"}>
                 Fuel Level
               </Typography>
-              <Typography variant="subtitle2" mt={1} width={"30%"}>
+              <Typography variant="subtitle2" mt={1} width={"18%"}>
                 1/4
               </Typography>
               <div className="divider-line" />
@@ -340,7 +340,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "63%",
+                    width: "60%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
@@ -404,7 +404,7 @@ const DeliveryDetail = () => {
               <Box sx={{ display: "flex" }}>
                 <Box
                   sx={{
-                    width: "63%",
+                    width: "60%",
                     borderRight: "1px solid #EAEAEA",
                     height: "20px",
                   }}
